@@ -13,11 +13,11 @@ module.exports = function(vax_trax_db, DataTypes) {
       allowNull: false
     },
     vaccineInterest: {
-      type: DataTypes.Boolean,
+      type: DataTypes.BOOLEAN,
       allowNull: true
     },
     schuduled: {
-      type: DataTypes.Boolean,
+      type: DataTypes.BOOLEAN,
       allowNull: true
     },
     shotNumber: {
