@@ -1,4 +1,4 @@
-const { INTEGER } = require("sequelize/types");
+//const { INTEGER } = require("sequelize/types");
 
 // eslint-disable-next-line camelcase
 module.exports = function(vax_trax_db, DataTypes) {
