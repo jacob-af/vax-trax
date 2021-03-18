@@ -26,7 +26,7 @@ $(document).ready(() => {
     // });
 
     $.ajax({
-      url: `https://data.cdc.gov/resource/9mfq-cb36.json?state=MI`,
+      url: "https://data.cdc.gov/resource/9mfq-cb36.json?state=" + "MI",
       type: "GET",
       data: {
         $limit: 5000,
