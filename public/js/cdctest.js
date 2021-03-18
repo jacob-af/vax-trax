@@ -1,29 +1,29 @@
 /* eslint-disable prettier/prettier */
 $(document).ready(() => {
-  const stateForm = $("form.state-search");
-  const stateInput = $("#state-input");
+  // const stateForm = $("form.state-search");
+  // const stateInput = $("#state-input");
 
   stateForm.on("submit", (event) => {
     event.preventDefault();
 
-    const state = stateInput.val().trim();
+    // const state = stateInput.val().trim();
 
-    $.ajax({
-      url: `https://data.cdc.gov/resource/w9zu-fywh.json?jurisdiction=${state}`,
-      type: "GET",
-      data: {
-        $limit: 5000,
-        // eslint-disable-next-line camelcase
-        $$app_token: "hQ461wggNs20MAJ8r5CW9inzl",
-      },
-    }).done((data) => {});
+    // $.ajax({
+    //   url: `https://data.cdc.gov/resource/w9zu-fywh.json?jurisdiction=${state}`,
+    //   type: "GET",
+    //   data: {
+    //     $limit: 5000,
+    //     // eslint-disable-next-line camelcase
+    //     $$app_token: "hQ461wggNs20MAJ8r5CW9inzl",
+    //   },
+    // }).done((data) => {});
 
-    $.ajax({
-      url: `https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json`,
-      type: "GET",
-    }).done((data) => {
-      console.log(data);
-    });
+    // $.ajax({
+    //   url: "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json",
+    //   type: "GET",
+    // }).done((data) => {
+    //   console.log(data);
+    // });
 
     $.ajax({
       url: `https://data.cdc.gov/resource/9mfq-cb36.json?state=MI`,
@@ -34,9 +34,9 @@ $(document).ready(() => {
         $$app_token: "hQ461wggNs20MAJ8r5CW9inzl",
       },
     }).done((data) => {
-      let dates = [];
-      let deaths = [];
-      let cases = [];
+      const dates = [];
+      const deaths = [];
+      const cases = [];
       data.sort((a, b) => (a.submission_date > b.submission_date ? 1 : -1));
       data.forEach((row) => {
         dates.push(row.submission_date);
@@ -89,6 +89,7 @@ $(document).ready(() => {
         // Configuration options go here
         options: {},
       });
+      console.log(casesChart, deathChart);
     });
   });
 });
