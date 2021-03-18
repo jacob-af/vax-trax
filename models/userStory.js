@@ -1,5 +1,4 @@
 module.exports = function(vax_trax_db, DataTypes) {
-
   const userStory = vax_trax_db.define("userStory", {
     shareBlog: {
       type: DataTypes.BOOLEAN,
