@@ -25,6 +25,48 @@ $(document).ready(() => {
     // });
 
     $.ajax({
+      url:
+        "https://crossorigin.me/https://covid.cdc.gov/covid-data-tracker/COVIDData/getAjaxData?id=vaccination_trends_data",
+      type: "GET"
+
+      // data: {
+      //   $limit: 5000,
+      //   // eslint-disable-next-line camelcase
+      //   $$app_token: "hQ461wggNs20MAJ8r5CW9inzl"
+      // }
+    }).done(data => {
+      const vaccinations = [];
+      data.sort((a, b) => (a.Date > b.Date ? 1 : -1));
+      data.forEach(row => {
+        dates.push(row.Date);
+        vaccinations.push(row.Admin_Dose_1_Cumulative);
+      });
+      const deathData = document.getElementById("covid-vax").getContext("2d");
+      const vaxChart = new Chart(deathData, {
+        // The type of chart we want to create
+        type: "line",
+
+        // The data for our dataset
+        data: {
+          labels: dates,
+          datasets: [
+            {
+              label: "Covid Deaths in Selected State",
+              backgroundColor: "rgb(255, 99, 132)",
+              borderColor: "rgb(255, 99, 132)",
+              data: vaccinations,
+              fill: false,
+              pointStyle: "dash"
+            }
+          ]
+        },
+        // Configuration options go here
+        options: {}
+      });
+      console.log(vaxChart);
+    });
+
+    $.ajax({
       url: "https://data.cdc.gov/resource/9mfq-cb36.json?state=" + "MI",
       type: "GET",
       data: {
@@ -38,7 +80,7 @@ $(document).ready(() => {
       const cases = [];
       data.sort((a, b) => (a.submission_date > b.submission_date ? 1 : -1));
       data.forEach(row => {
-        dates.push(row.submission_date);
+        dates.push(row.submission_date.replace("T00:00:00.000", ""));
         deaths.push(row.tot_death);
         cases.push(row.tot_cases);
       });
