@@ -1,25 +1,26 @@
+/* eslint-disable prettier/prettier */
 const nodemailer = require("nodemailer");
 
 // async..await is not allowed in global scope, must use a wrapper
 async function main() {
   // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
       user: "vaxxtraxx@gmail.com", // generated ethereal user
-      pass: "tpwlfylgsblvwlnh", // generated ethereal password
-    },
+      pass: "tpwlfylgsblvwlnh" // generated ethereal password
+    }
   });
 
   // send mail with defined transport object
-  let info = await transporter.sendMail({
+  const info = await transporter.sendMail({
     from: '"testing" <vaxxtraxx@gmail.com>', // sender address
     to: "jfeitler@gmail.com", // list of receivers
     subject: "Hello my darling", // Subject line
     text: "Hello world?", // plain text body
-    html: "<b>Hello world?</b>", // html body
+    html: "<b>Hello world?</b>" // html body
   });
 
   console.log("Message sent: %s", info.messageId);

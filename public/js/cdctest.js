@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
 $(document).ready(() => {
-  // const stateForm = $("form.state-search");
+  const stateForm = $("form.state-search");
   // const stateInput = $("#state-input");
 
-  stateForm.on("submit", (event) => {
+  stateForm.on("submit", event => {
     event.preventDefault();
 
     // const state = stateInput.val().trim();
@@ -31,14 +31,14 @@ $(document).ready(() => {
       data: {
         $limit: 5000,
         // eslint-disable-next-line camelcase
-        $$app_token: "hQ461wggNs20MAJ8r5CW9inzl",
-      },
-    }).done((data) => {
+        $$app_token: "hQ461wggNs20MAJ8r5CW9inzl"
+      }
+    }).done(data => {
       const dates = [];
       const deaths = [];
       const cases = [];
       data.sort((a, b) => (a.submission_date > b.submission_date ? 1 : -1));
-      data.forEach((row) => {
+      data.forEach(row => {
         dates.push(row.submission_date);
         deaths.push(row.tot_death);
         cases.push(row.tot_cases);
@@ -62,12 +62,12 @@ $(document).ready(() => {
               borderColor: "rgb(255, 99, 132)",
               data: deaths,
               fill: false,
-              pointStyle: "dash",
-            },
-          ],
+              pointStyle: "dash"
+            }
+          ]
         },
         // Configuration options go here
-        options: {},
+        options: {}
       });
       const casesChart = new Chart(casesData, {
         // The type of chart we want to create
@@ -82,12 +82,12 @@ $(document).ready(() => {
               borderColor: "rgb(255, 99, 132)",
               data: cases,
               fill: false,
-              pointStyle: "dash",
-            },
-          ],
+              pointStyle: "dash"
+            }
+          ]
         },
         // Configuration options go here
-        options: {},
+        options: {}
       });
       console.log(casesChart, deathChart);
     });
