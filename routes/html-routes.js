@@ -24,7 +24,7 @@ module.exports = function(app) {
     res.render("members");
   });
 
-  app.get("/cdctest", isAuthenticated, (req, res) => {
+  app.get("/cdctest", (req, res) => {
     res.render("cdctest");
   });
 };
