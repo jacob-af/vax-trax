@@ -1,6 +1,4 @@
-// eslint-disable-next-line camelcase
 module.exports = function(vax_trax_db, DataTypes) {
-  // eslint-disable-next-line camelcase
   const userStory = vax_trax_db.define("userStory", {
     shareBlog: {
       type: DataTypes.BOOLEAN,

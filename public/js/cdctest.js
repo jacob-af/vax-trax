@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 $(document).ready(() => {
   const stateForm = $("form.state-search");
   // const stateInput = $("#state-input");
