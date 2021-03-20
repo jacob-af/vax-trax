@@ -11,6 +11,22 @@ const db = require("./models");
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
+const fetch = require("node-fetch");
+const cors = require("cors");
+app.get("/cdcdata", cors(), async (req, res) => {
+  fetch(
+    "https://covid.cdc.gov/covid-data-tracker/COVIDData/getAjaxData?id=vaccination_trends_data",
+    {}
+  ).then(response => {
+    response
+      .json()
+      .then(r => {
+        res.send(r);
+      })
+      .catch(e => console.log(e));
+  });
+});
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
