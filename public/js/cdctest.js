@@ -1,31 +1,136 @@
 $(document).ready(() => {
-  const stateForm = $("form.state-search");
-  // const stateInput = $("#state-input");
+  const usStates = [
+    { name: "ALABAMA", abbreviation: "AL" },
+    { name: "ALASKA", abbreviation: "AK" },
+    { name: "ARIZONA", abbreviation: "AZ" },
+    { name: "ARKANSAS", abbreviation: "AR" },
+    { name: "CALIFORNIA", abbreviation: "CA" },
+    { name: "COLORADO", abbreviation: "CO" },
+    { name: "CONNECTICUT", abbreviation: "CT" },
+    { name: "DELAWARE", abbreviation: "DE" },
+    { name: "DISTRICT OF COLUMBIA", abbreviation: "DC" },
+    { name: "FLORIDA", abbreviation: "FL" },
+    { name: "GEORGIA", abbreviation: "GA" },
+    { name: "HAWAII", abbreviation: "HI" },
+    { name: "IDAHO", abbreviation: "ID" },
+    { name: "ILLINOIS", abbreviation: "IL" },
+    { name: "INDIANA", abbreviation: "IN" },
+    { name: "IOWA", abbreviation: "IA" },
+    { name: "KANSAS", abbreviation: "KS" },
+    { name: "KENTUCKY", abbreviation: "KY" },
+    { name: "LOUISIANA", abbreviation: "LA" },
+    { name: "MAINE", abbreviation: "ME" },
+    { name: "MARYLAND", abbreviation: "MD" },
+    { name: "MASSACHUSETTS", abbreviation: "MA" },
+    { name: "MICHIGAN", abbreviation: "MI" },
+    { name: "MINNESOTA", abbreviation: "MN" },
+    { name: "MISSISSIPPI", abbreviation: "MS" },
+    { name: "MISSOURI", abbreviation: "MO" },
+    { name: "MONTANA", abbreviation: "MT" },
+    { name: "NEBRASKA", abbreviation: "NE" },
+    { name: "NEVADA", abbreviation: "NV" },
+    { name: "NEW HAMPSHIRE", abbreviation: "NH" },
+    { name: "NEW JERSEY", abbreviation: "NJ" },
+    { name: "NEW MEXICO", abbreviation: "NM" },
+    { name: "NEW YORK", abbreviation: "NY" },
+    { name: "NORTH CAROLINA", abbreviation: "NC" },
+    { name: "NORTH DAKOTA", abbreviation: "ND" },
+    { name: "OHIO", abbreviation: "OH" },
+    { name: "OKLAHOMA", abbreviation: "OK" },
+    { name: "OREGON", abbreviation: "OR" },
+    { name: "PENNSYLVANIA", abbreviation: "PA" },
+    { name: "PUERTO RICO", abbreviation: "PR" },
+    { name: "RHODE ISLAND", abbreviation: "RI" },
+    { name: "SOUTH CAROLINA", abbreviation: "SC" },
+    { name: "SOUTH DAKOTA", abbreviation: "SD" },
+    { name: "TENNESSEE", abbreviation: "TN" },
+    { name: "TEXAS", abbreviation: "TX" },
+    { name: "UTAH", abbreviation: "UT" },
+    { name: "VERMONT", abbreviation: "VT" },
+    { name: "VIRGINIA", abbreviation: "VA" },
+    { name: "WASHINGTON", abbreviation: "WA" },
+    { name: "WEST VIRGINIA", abbreviation: "WV" },
+    { name: "WISCONSIN", abbreviation: "WI" },
+    { name: "WYOMING", abbreviation: "WY" }
+  ];
 
-  stateForm.on("submit", event => {
-    event.preventDefault();
+  for (let i = 0; i < usStates.length; i++) {
+    const option = document.createElement("option");
+    option.text = usStates[i].name + " [" + usStates[i].abbreviation + "]";
+    option.value = i;
+    const select = document.getElementById("stateSelector");
+    select.appendChild(option);
+  }
 
-    // const state = stateInput.val().trim();
+  // $.ajax({
+  //   url: `https://data.cdc.gov/resource/w9zu-fywh.json?jurisdiction=${state}`,
+  //   type: "GET",
+  //   data: {
+  //     $limit: 5000,
+  //     // eslint-disable-next-line camelcase
+  //     $$app_token: "hQ461wggNs20MAJ8r5CW9inzl",
+  //   },
+  // }).done((data) => {});
 
-    // $.ajax({
-    //   url: `https://data.cdc.gov/resource/w9zu-fywh.json?jurisdiction=${state}`,
-    //   type: "GET",
-    //   data: {
-    //     $limit: 5000,
-    //     // eslint-disable-next-line camelcase
-    //     $$app_token: "hQ461wggNs20MAJ8r5CW9inzl",
-    //   },
-    // }).done((data) => {});
+  // $.ajax({
+  //   url: "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json",
+  //   type: "GET",
+  // }).done((data) => {
+  //   console.log(data);
+  // });
 
-    // $.ajax({
-    //   url: "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json",
-    //   type: "GET",
-    // }).done((data) => {
-    //   console.log(data);
-    // });
+  $.ajax({
+    url: "/cdcdata",
+    type: "GET"
+  }).done(data => {
+    console.log(data);
+    const dates = [];
+    const vaccination1 = [];
+    const vaccination2 = [];
+    data.vaccination_trends_data.filter(datum => datum.location === "USA");
+    data.vaccination_trends_data.sort((a, b) => (a.Date > b.Date ? 1 : -1));
+    data.vaccination_trends_data.forEach(row => {
+      dates.push(row.Date);
+      vaccination1.push(row.Admin_Dose_1_Cumulative);
+      vaccination2.push(row.Admin_Dose_2_Cumulative);
+    });
+    const deathData = document.getElementById("covid-vax").getContext("2d");
+    const vaxChart = new Chart(deathData, {
+      // The type of chart we want to create
+      type: "line",
 
+      // The data for our dataset
+      data: {
+        labels: dates,
+        datasets: [
+          {
+            label: "First Dose",
+            backgroundColor: "rgb(255, 99, 132)",
+            borderColor: "rgb(255, 99, 132)",
+            data: vaccination1,
+            fill: false,
+            pointStyle: "dash"
+          },
+          {
+            label: "Second Dose",
+            backgroundColor: "rgb(255, 99, 132)",
+            borderColor: "rgb(0, 99, 132)",
+            data: vaccination2,
+            fill: false,
+            pointStyle: "dash"
+          }
+        ]
+      },
+      // Configuration options go here
+      options: {}
+    });
+    console.log(vaxChart);
+  });
+  const displayGraphs = state => {
     $.ajax({
-      url: "https://data.cdc.gov/resource/9mfq-cb36.json?state=" + "MI",
+      url:
+        "https://data.cdc.gov/resource/9mfq-cb36.json?state=" +
+        state.abbreviation,
       type: "GET",
       data: {
         $limit: 5000,
@@ -38,7 +143,7 @@ $(document).ready(() => {
       const cases = [];
       data.sort((a, b) => (a.submission_date > b.submission_date ? 1 : -1));
       data.forEach(row => {
-        dates.push(row.submission_date);
+        dates.push(row.submission_date.replace("T00:00:00.000", ""));
         deaths.push(row.tot_death);
         cases.push(row.tot_cases);
       });
@@ -56,7 +161,7 @@ $(document).ready(() => {
           labels: dates,
           datasets: [
             {
-              label: "Covid Deaths in Selected State",
+              label: "Covid Deaths in " + state.name,
               backgroundColor: "rgb(255, 99, 132)",
               borderColor: "rgb(255, 99, 132)",
               data: deaths,
@@ -76,7 +181,7 @@ $(document).ready(() => {
           labels: dates,
           datasets: [
             {
-              label: "Covid Cases in Selected State",
+              label: "Covid Cases in " + state.name,
               backgroundColor: "rgb(255, 99, 132)",
               borderColor: "rgb(255, 99, 132)",
               data: cases,
@@ -90,5 +195,13 @@ $(document).ready(() => {
       });
       console.log(casesChart, deathChart);
     });
-  });
+  };
+
+  displayGraphs(usStates[22]);
+
+  const handleStateChange = () => {
+    const stateIndex = $("#stateSelector option:selected").val();
+    displayGraphs(usStates[stateIndex]);
+  };
+  $("#stateSelector").change(() => handleStateChange());
 });
