@@ -101,7 +101,7 @@ body{
 }
 .split.left{
     left: 0;
-    background: url('vax_card.png');
+    background: url('../assets/img/vax_card.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -114,7 +114,7 @@ body{
 }
 .split.right{
     right: 0;
-    background: url('Capture.PNG');
+    background: url('../assets/img/Capture.PNG');
     background-repeat: no-repeat;
     background-size: cover;
 }
