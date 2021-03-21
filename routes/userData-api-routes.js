@@ -7,11 +7,9 @@ module.exports = app => {
     if (req.query.User_id) {
       query.UserId = req.query.user_id;
     }
-    db.userData
-      .findAll({
-        where: query
-      })
-      .then(dbuserData => res.json(dbuserData));
+    db.UserData.findAll({
+      where: query
+    }).then(dbuserData => res.json(dbuserData));
   });
 
   //this is a route for updating the data.
