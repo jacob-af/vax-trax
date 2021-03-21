@@ -18,9 +18,11 @@ module.exports = app => {
   app.put("/api/user", (req, res) => {
     db.UserData.update(
       {
+        name: req.body.name,
+        vaccineInterest: req.body.vaccineInterest,
+        vaccineType: req.body.vaccineType,
         scheduled: req.body.scheduled,
-        shotNumber: req.body.shotNumber,
-        vaccineType: req.body.vaccineType
+        shotNumber: req.body.shotNumber
       },
       {
         where: {
