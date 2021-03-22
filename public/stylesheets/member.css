@@ -1,0 +1,68 @@
+.member-bg {
+    background-image:linear-gradient(0deg, rgba(155, 245, 240, 0.50), rgba(155, 245, 240, 0.50)), url(/assets/img/vax_card.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav {
+    height: 10%;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+#logo {
+    height: auto;
+    width: 10%;
+    margin: 3rem 0 0 3rem;
+}
+
+#logout-button {
+    float: right;
+    background-color: #4C9595;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    border-radius: 50px;
+    width: 15rem;
+    margin: 5rem 6rem 0 0;
+
+}
+
+.logout {
+    color: white;
+}
+
+#welcome {
+    text-align: left;
+}
+
+#cms {
+    background-color: #B0DFDF;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+ #member-info {
+    background-color: #B0DFDF;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    padding: 1.5rem;
+    border-radius: 15px;
+ }
+
+ button {
+    background-color: #B0DFDF;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    padding: 1.5rem;
+    border-radius: 15px;
+ }
