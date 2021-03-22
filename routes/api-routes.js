@@ -50,4 +50,17 @@ module.exports = function(app) {
       });
     }
   });
+  app.get("/api/user/:id", (req, res) => {
+    // Find one user with the id in req.params.id and return them to the user with res.json
+    db.User.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(dbvax_trax_db => res.json(dbvax_trax_db));
+  });
+  app.post("/api/userdata", (req, res) => {
+    // Create an Author with the data available to us in req.body
+    console.log(req.body);
+    db.userData.create(req.body).then(dbuserData => res.json(dbuserData));
+  });
 };
