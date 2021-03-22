@@ -35,7 +35,7 @@ h2 {
     text-align: center;
 }
 
-#form-text {
+#password-input, #email-input, #password-confirm {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
 }
