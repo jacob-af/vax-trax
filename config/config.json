@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "b00tcamp",
+    "password": "sarah123",
     "database": "vax_trax_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "sarah123",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"

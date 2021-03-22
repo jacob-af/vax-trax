@@ -1,7 +1,7 @@
 .bg-gradient-su {
     height: 100vh;
     width: 100%;
-    background-image: url(../assets/img/su_bg.svg), linear-gradient(135deg, #B0DFDF, white);
+    background-image: url(/assets/img/su_bg.svg), linear-gradient(135deg, #B0DFDF, white);
     background-repeat: no-repeat;
     background-position: center bottom;
 }
@@ -9,7 +9,7 @@
 .bg-gradient-login {
     height: 100vh;
     width: 100%;
-    background-image: url(../assets/img/login_bg.svg), linear-gradient(45deg, #B0DFDF, white);
+    background-image: url(/assets/img/login_bg.svg), linear-gradient(45deg, white, #B0DFDF);
     background-repeat: no-repeat;
     background-position: center bottom;
 }

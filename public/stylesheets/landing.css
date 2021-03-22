@@ -12,12 +12,12 @@
     box-sizing: border-box;
 }
 body{
-    background: rgba(155, 245, 240, 0.50);
     height: 100vh;
+    width:100%;
     overflow: hidden;
     margin: 0;
 }
-/*h1{
+h1{
     font-size: 4rem;
     color: #fff;
     position: absolute;
@@ -28,34 +28,36 @@ body{
 } */
 
 #logo {
-    height: 1.5rem;
+    height: 150px;
     width: auto;
-    margin: 2.5rem 0 0 2.5rem;
+    margin: 5.5rem 0 0 5.5rem;
 }
 
 #left-text {
-    font-size: 4rem;
+    font-size: 75px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
+    line-height: 7rem;
     width: 50%;
     text-align:left;
     color: rgb(10, 10, 10);
     position: absolute;
     left: 50%;
-    top: 20%;
+    top: 30%;
     transform: translateX(-50%);
     white-space: nowrap;
 }
 
 #right-text {
-    font-size: 4rem;
+    font-size: 75px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
+    line-height: 7rem;
     text-align: right;
     color: rgb(10, 10, 10);
     position: absolute;
     left: 50%;
-    top: 20%;
+    top: 30%;
     transform: translateX(-50%);
     white-space: nowrap;
 }
@@ -72,7 +74,7 @@ body{
     color: #fff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #4C9595;
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: bold;
     border-radius: 40px;
     text-transform: uppercase;
@@ -87,11 +89,12 @@ body{
     background-color: var(--right-btn-hover-color);
     border-color: var(--right-btn-hover-color)
 }
-.container{ 
+#landing-container{ 
     position: relative;
     width: 100%;
     height: 100%;
     background: #333;
+    
 }
 .split{
     position: absolute;
