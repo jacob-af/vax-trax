@@ -13,9 +13,8 @@ module.exports = app => {
     }).then(dbUserStory => res.json(dbUserStory));
   });
 
-  // Get route for retrieving a single post
   app.get("/api/UserStory/:id", (req, res) => {
-    db.Post.findOne({
+    db.UserStory.findOne({
       where: {
         id: req.params.id
       },
@@ -28,7 +27,7 @@ module.exports = app => {
   });
 
   app.delete("/api/UserStory/:id", (req, res) => {
-    db.Post.destroy({
+    db.UserStory.destroy({
       where: {
         id: req.params.id
       }
@@ -36,10 +35,20 @@ module.exports = app => {
   });
 
   app.put("/api/UserStory", (req, res) => {
-    db.Post.update(req.body, {
+    db.UserStory.update(req.body, {
       where: {
         id: req.body.id
       }
     }).then(dbUserStory => res.json(dbUserStory));
+  });
+
+  app.get("/api/UserStory/category/:category", (req, res) => {
+    db.UserStory.findAll({
+      where: {
+        category: req.params.category
+      }
+    }).then(dbUserStory => {
+      res.json(dbUserStory);
+    });
   });
 };
