@@ -12,10 +12,10 @@ module.exports = function(vax_trax_db, DataTypes) {
       type: DataTypes.BOOLEAN,
       allowNull: true
     },
-    datesScheduled:{
+    datesScheduled: {
       type: DataTypes.STRING,
       allowNull: true
-    }
+    },
     shotNumber: {
       type: DataTypes.INTEGER,
       allowNull: true
