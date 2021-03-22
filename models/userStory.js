@@ -1,5 +1,5 @@
-module.exports = function(vax_trax_db, DataTypes) {
-  const userStory = vax_trax_db.define("userStory", {
+module.exports = (vax_trax_db, DataTypes) => {
+  const UserStory = vax_trax_db.define("UserStory", {
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -19,7 +19,7 @@ module.exports = function(vax_trax_db, DataTypes) {
       defaultValue: "Personal"
     }
   });
-  userStory.associate = models => {
+  UserStory.associate = models => {
     // We're saying that a Post should belong to an Author
     // A Post can't be created without an Author due to the foreign key constraint
     userStory.belongsTo(models.User, {
@@ -28,5 +28,5 @@ module.exports = function(vax_trax_db, DataTypes) {
       }
     });
   };
-  return userStory;
+  return UserStory;
 };
