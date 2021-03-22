@@ -7,7 +7,7 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members");
     }
-    res.render("index");
+    res.render("index", { style: "landing.css" });
   });
 
   app.get("/login", (req, res) => {
@@ -15,7 +15,7 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members");
     }
-    res.render("login");
+    res.render("login", { style: "login-signup.css" });
   });
 
   app.get("/signup", (req, res) => {
@@ -23,7 +23,7 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members");
     }
-    res.render("signup");
+    res.render("signup", { style: "login-signup.css" });
   });
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
