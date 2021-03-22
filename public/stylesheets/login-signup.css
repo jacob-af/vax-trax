@@ -1,0 +1,55 @@
+.bg-gradient-su {
+    height: 100vh;
+    width: 100%;
+    background-image: url(/assets/img/su_bg.svg), linear-gradient(135deg, #B0DFDF, white);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.bg-gradient-login {
+    height: 100vh;
+    width: 100%;
+    background-image: url(/assets/img/login_bg.svg), linear-gradient(45deg, white, #B0DFDF);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+#form-card {
+    background-color: #B0DFDF;
+    border-radius: 15px;
+    padding: 3.5rem;
+    margin-top: 7.5rem;
+    height: 50rem;
+}
+
+#logo {
+    height: auto;
+    width: 10%;
+    margin: 3rem 0 0 3rem;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+}
+
+#password-input, #email-input, #password-confirm {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+button {
+    background-color: #4C9595;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 3.5rem;
+    align-items: center;
+    display: grid;
+    width: 15rem;
+}
