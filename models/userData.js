@@ -3,21 +3,18 @@
 // eslint-disable-next-line camelcase
 module.exports = function(vax_trax_db, DataTypes) {
   // eslint-disable-next-line camelcase
-  const UserData = vax_trax_db.define("UserData", {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    vaccineInterest: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
-    },
+
+  const UserData = vax_trax_db.define("userData", {
     vaccineType: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
-    schuduled: {
+    scheduled: {
       type: DataTypes.BOOLEAN,
+      allowNull: true
+    },
+    datesScheduled: {
+      type: DataTypes.STRING,
       allowNull: true
     },
     shotNumber: {
