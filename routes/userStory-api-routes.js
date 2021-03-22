@@ -7,14 +7,14 @@ module.exports = app => {
       query.UserId = req.query.user_id;
     }
 
-    db.UserStory.findAll({
+    db.UserStories.findAll({
       where: query,
       include: [db.User]
     }).then(dbUserStory => res.json(dbUserStory));
   });
 
   app.get("/api/UserStory/:id", (req, res) => {
-    db.UserStory.findOne({
+    db.UserStories.findOne({
       where: {
         id: req.params.id
       },
@@ -22,12 +22,22 @@ module.exports = app => {
     }).then(dbUserStory => res.json(dbUserStory));
   });
 
+  app.get("/api/UserStory/category/:category", (req, res) => {
+    db.UserStories.findAll({
+      where: {
+        category: req.params.category
+      }
+    }).then(dbPost => {
+      res.json(dbPost);
+    });
+  });
+
   app.post("/api/UserStory", (req, res) => {
-    db.UserStory.create(req.body).then(dbUserStory => res.json(dbUserStory));
+    db.UserStories.create(req.body).then(dbUserStory => res.json(dbUserStory));
   });
 
   app.delete("/api/UserStory/:id", (req, res) => {
-    db.UserStory.destroy({
+    db.UserStories.destroy({
       where: {
         id: req.params.id
       }
@@ -35,7 +45,7 @@ module.exports = app => {
   });
 
   app.put("/api/UserStory", (req, res) => {
-    db.UserStory.update(req.body, {
+    db.UserStories.update(req.body, {
       where: {
         id: req.body.id
       }
