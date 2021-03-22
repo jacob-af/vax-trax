@@ -23,6 +23,16 @@ module.exports = app => {
     }).then(dbUserStory => res.json(dbUserStory));
   });
 
+  app.get("/api/UserStory/category/:category", (req, res) => {
+    db.UserStories.findAll({
+      where: {
+        category: req.params.category
+      }
+    }).then(dbPost => {
+      res.json(dbPost);
+    });
+  });
+
   app.post("/api/UserStory", (req, res) => {
     db.UserStories.create(req.body).then(dbUserStory => res.json(dbUserStory));
   });
