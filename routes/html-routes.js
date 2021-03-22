@@ -31,7 +31,10 @@ module.exports = function(app) {
     res.render("members");
   });
 
-  app.get("/cdctest", (req, res) => {
-    res.render("cdctest");
+  app.get("/blogtest", (req, res) => {
+    res.render("blogtest");
+  });
+  app.get("/userstoryTest", (req, res) => {
+    res.render("userstoryTest");
   });
 };
