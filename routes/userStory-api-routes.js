@@ -13,7 +13,6 @@ module.exports = app => {
     }).then(dbUserStory => res.json(dbUserStory));
   });
 
-  // Get route for retrieving a single post
   app.get("/api/UserStory/:id", (req, res) => {
     db.UserStories.findOne({
       where: {
@@ -51,5 +50,15 @@ module.exports = app => {
         id: req.body.id
       }
     }).then(dbUserStory => res.json(dbUserStory));
+  });
+
+  app.get("/api/UserStory/category/:category", (req, res) => {
+    db.UserStory.findAll({
+      where: {
+        category: req.params.category
+      }
+    }).then(dbUserStory => {
+      res.json(dbUserStory);
+    });
   });
 };
