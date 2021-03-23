@@ -42,26 +42,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Get elements from the page
   const bodyInput = document.getElementById("body");
-  const dateInput = document.getElementById("date");
+  const dateInput = document.getElementById("dateOfExperience");
   const cmsForm = document.getElementById("cms");
   const postCategorySelect = document.getElementById("category");
   const vaccine = document.querySelector('input[type="radio"]:checked').value;
-
+  console.log(dateInput);
   // Set default value for the category
   postCategorySelect.value = "Personal";
 
   const handleFormSubmit = e => {
     e.preventDefault();
-    if (!titleInput.value || !bodyInput.value) {
+    if (!bodyInput.value) {
       alert("Your post is missing some content");
     }
 
     // Create a newPost object to send off to the backend
     const newPost = {
-      date: dateInput.value,
+      dateOfExperience: dateInput.value,
       body: bodyInput.value.trim(),
       category: postCategorySelect.value,
-      vaccine: vaccine
+      vaccineType: vaccine
     };
     console.log("handleFormSubmit -> newPost", newPost);
 
