@@ -22,6 +22,10 @@ module.exports = function(vax_trax_db, DataTypes) {
     secondShot: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    dateOfShot: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   });
   UserStories.associate = models => {
