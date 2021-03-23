@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const dateInput = document.getElementById("date");
   const cmsForm = document.getElementById("cms");
   const postCategorySelect = document.getElementById("category");
-  const vaccine = document.getElementById("vaccine");
+  const vaccine = document.querySelector('input[type="radio"]:checked').value;
 
   // Set default value for the category
   postCategorySelect.value = "Personal";
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       date: dateInput.value,
       body: bodyInput.value.trim(),
       category: postCategorySelect.value,
-      vaccine: vaccine.value
+      vaccine: vaccine
     };
     console.log("handleFormSubmit -> newPost", newPost);
 
