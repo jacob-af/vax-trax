@@ -20,6 +20,7 @@
     padding: 3.5rem;
     margin-top: 7.5rem;
     height: 50rem;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
 }
 
 #logo {
@@ -40,7 +41,7 @@ h2 {
     font-size: 18px;
 }
 
-button {
+.logsign-btn {
     background-color: #4C9595;
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -52,4 +53,9 @@ button {
     align-items: center;
     display: grid;
     width: 15rem;
+    height: 5rem;
+}
+
+a:hover {
+    color: white;
 }

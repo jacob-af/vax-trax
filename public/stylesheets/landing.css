@@ -81,6 +81,8 @@ h1{
     width: 15rem;
     padding: 1.5rem;
 }
+
+/*
 .split.left .signup-btn:hover{
     background-color: var(--left-btn-hover-color);
     border-color: var(--left-btn-hover-color)
@@ -89,6 +91,8 @@ h1{
     background-color: var(--right-btn-hover-color);
     border-color: var(--right-btn-hover-color)
 }
+*/
+
 #landing-container{ 
     position: relative;
     width: 100%;
@@ -143,6 +147,11 @@ h1{
 .hover-right .left {
     width: var(--other-width)
 }
+
+a:hover {
+    color: white;
+}
+
 @media(max-width: 800px){
     h1{
         font-size: 2rem;

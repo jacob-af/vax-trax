@@ -1,5 +1,6 @@
 .member-bg {
-    background-image:linear-gradient(0deg, rgba(155, 245, 240, 0.50), rgba(155, 245, 240, 0.50)), url(/assets/img/vax_card.png);
+    background-image:linear-gradient(0deg, rgba(253, 253, 253, 1), rgb(196, 247, 244));
+    /*, url(/assets/img/vax_card.png)*/
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -35,6 +36,20 @@ nav {
 }
 
 #welcome {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: left;
+    float: left;
+    margin-bottom: 6rem;
+}
+
+#userEx {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
     text-align: left;
 }
 
@@ -42,27 +57,57 @@ nav {
     background-color: #B0DFDF;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: lighter;
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 16px;
     padding: 1.5rem;
     border-radius: 15px;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
+    margin-left: 3.5rem;
 }
  #member-info {
     background-color: #B0DFDF;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: lighter;
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 16px;
     padding: 1.5rem;
     border-radius: 15px;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
+    margin-right: 3.5rem;
  }
 
- button {
-    background-color: #B0DFDF;
-    color: black;
+ .logsign-btn {
+    background-color: #4C9595;
+    color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
     font-size: 14px;
-    padding: 1.5rem;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 3.5rem;
+    align-items: center;
+    display: grid;
+    width: 15rem;
+    height: 5rem;
+}
+
+
+
+.custom-select {
+    background-color: #f3fafa;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    padding: .5rem;
     border-radius: 15px;
- }
+    box-shadow:5px 5px 5px rgb(107, 126, 129);
+}
+
+#select-cat {
+    margin-top: 1.5rem;
+}
+
+a:hover {
+    color: white;
+}
