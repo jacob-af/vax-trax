@@ -1,6 +1,7 @@
 $(document).ready(() => {
   // Getting references to our form and input
   const signUpForm = $("form.signup");
+  const nameInput = $("input#user-name");
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
   const passwordConfirm = $("input#password-confirm");
@@ -9,6 +10,7 @@ $(document).ready(() => {
   signUpForm.on("submit", event => {
     event.preventDefault();
     const userData = {
+      name: nameInput.val().trim(),
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
       confirm: passwordConfirm.val().trim()
