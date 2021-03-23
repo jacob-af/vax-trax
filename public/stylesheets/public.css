@@ -21,26 +21,28 @@ nav {
 
 #logout-button {
     float: right;
-    background: linear-gradient(#64c4c4, white);
+    background: linear-gradient(#64c4c4, #acf7f7);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
     border-radius: 50px;
-    width: 15rem;
+    width: 18rem;
+    height: 5rem;
     margin: 5rem 6rem 0 0;
-
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
 }
 
 #dash-button {
     float: right;
-    background: linear-gradient(#64c4c4, white);
+    background: linear-gradient(#64c4c4, #acf7f7);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
     border-radius: 50px;
     width: 25rem;
+    height: 5rem;
     margin: 5rem 6rem 0 0;
-
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
 }
 
 .logout {
