@@ -14,13 +14,31 @@
     background-position: center bottom;
 }
 
-#form-card {
+.su-card {
     background-color: #B0DFDF;
     border-radius: 15px;
     padding: 3.5rem;
     margin-top: 7.5rem;
     height: 50rem;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    height: 65rem;
+}
+
+.login-card {
+    background-color: #B0DFDF;
+    border-radius: 15px;
+    padding: 3.5rem;
+    margin-top: 7.5rem;
+    height: 50rem;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
 }
 
 #logo {
@@ -42,11 +60,11 @@ h2 {
 }
 
 .logsign-btn {
-    background: linear-gradient(#64c4c4, white);
+    background: linear-gradient(#64c4c4, #acf7f7);
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: lighter;
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 22px;
     border-radius: 50px;
     margin: auto;
     margin-top: 3.5rem;
@@ -54,8 +72,21 @@ h2 {
     display: grid;
     width: 15rem;
     height: 5rem;
+    outline: 0;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
 }
 
 a:hover {
     color: white;
+}
+
+label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
+.login-link {
+    color: rgb(107, 126, 129);
 }
