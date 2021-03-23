@@ -55,23 +55,25 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!bodyInput.value) {
       alert("Your post is missing some content");
     }
+    $.get("/api/user_data").then(data => {
+      console.log(data.id);
+      const newPost = {
+        UserId: data.id,
+        dateOfExperience: dateInput.value,
+        body: bodyInput.value.trim(),
+        category: postCategorySelect.value,
+        vaccineType: vaccine
+      };
+      console.log("handleFormSubmit -> newPost", newPost);
 
-    // Create a newPost object to send off to the backend
-    const newPost = {
-      dateOfExperience: dateInput.value,
-      body: bodyInput.value.trim(),
-      category: postCategorySelect.value,
-      vaccineType: vaccine
-    };
-    console.log("handleFormSubmit -> newPost", newPost);
-
-    // Check if the user is updating or creating and preform said function
-    if (updating) {
-      newPost.id = postId;
-      updatePost(newPost);
-    } else {
-      submitPost(newPost);
-    }
+      // Check if the user is updating or creating and preform said function
+      if (updating) {
+        newPost.id = postId;
+        updatePost(newPost);
+      } else {
+        submitPost(newPost);
+      }
+    });
   };
 
   // Event listener for when the blog is submitted
