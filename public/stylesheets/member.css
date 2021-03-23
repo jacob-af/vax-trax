@@ -19,7 +19,7 @@ nav {
     margin: 3rem 0 0 3rem;
 }
 
-#logout-button {
+#logout-button, #view-stories {
     float: right;
     background-color: #4C9595;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
