@@ -15,19 +15,7 @@ module.exports = function(vax_trax_db, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true
     },
-    firstShot: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    secondShot: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    dateOfShot: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    dateOfShot: {
+    dateOfExperience: {
       type: DataTypes.STRING,
       allowNull: true
     }

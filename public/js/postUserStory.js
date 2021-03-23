@@ -42,40 +42,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Get elements from the page
   const bodyInput = document.getElementById("body");
-  const dateInput = document.getElementById("date");
-  const cmsForm = document.getElementById("cms");
+  const dateInput = document.getElementById("dateOfExperience");
+  const userPostForm = document.getElementById("userPostForm");
   const postCategorySelect = document.getElementById("category");
-  const vaccine = document.querySelector('input[type="radio"]:checked').value;
-
+  const vaccine = document.querySelector('input[name="vaccine-type"]:checked')
+    .value;
   // Set default value for the category
-  postCategorySelect.value = "Personal";
+  postCategorySelect.value = "General";
 
   const handleFormSubmit = e => {
     e.preventDefault();
-    if (!titleInput.value || !bodyInput.value) {
+    if (!bodyInput.value) {
       alert("Your post is missing some content");
     }
-
-    // Create a newPost object to send off to the backend
-    const newPost = {
-      date: dateInput.value,
-      body: bodyInput.value.trim(),
-      category: postCategorySelect.value,
-      vaccine: vaccine
-    };
-    console.log("handleFormSubmit -> newPost", newPost);
-
-    // Check if the user is updating or creating and preform said function
-    if (updating) {
-      newPost.id = postId;
-      updatePost(newPost);
-    } else {
-      submitPost(newPost);
-    }
+    $.get("/api/user_data").then(data => {
+      console.log(data.id);
+      const newPost = {
+        UserId: data.id,
+        dateOfExperience: dateInput.value,
+        body: bodyInput.value.trim(),
+        category: postCategorySelect.value,
+        vaccineType: vaccine
+      };
+      // Check if the user is updating or creating and preform said function
+      if (updating) {
+        newPost.id = postId;
+        updatePost(newPost);
+      } else {
+        submitPost(newPost);
+      }
+    });
   };
 
   // Event listener for when the blog is submitted
-  cmsForm.addEventListener("submit", handleFormSubmit);
+  userPostForm.addEventListener("submit", handleFormSubmit);
 
   // Event handler for when a user submits a post
   const submitPost = post => {
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(response => response.json())
       .then(data => {
         console.log("Success in submitting post:", data);
-        window.location.href = "/blogtest";
+        window.location.href = "/public";
       })
       .catch(error => {
         console.error("Error:", error);
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
       .then(() => {
         console.log("Attempting update to post");
-        window.location.href = "/blog";
+        window.location.href = "/public";
       })
       .catch(error => {
         console.error("Error:", error);

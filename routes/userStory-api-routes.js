@@ -10,7 +10,18 @@ module.exports = app => {
     db.UserStories.findAll({
       where: query,
       include: [db.User]
-    }).then(dbUserStory => res.json(dbUserStory));
+    }).then(dbUserStory => {
+      const hbsObject = {
+        stories: dbUserStory.map(story => story.dataValues)
+      };
+      hbsObject.stories.map(story => {
+        story.name = story.User.name;
+        return story;
+      });
+      //console.log(hbsObject);
+      res.render("public", hbsObject);
+      //res.json(dbUserStory);
+    });
   });
 
   app.get("/api/UserStory/:id", (req, res) => {
