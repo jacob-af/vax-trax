@@ -1,5 +1,6 @@
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
+const db = require("../models");
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
@@ -32,8 +33,25 @@ module.exports = function(app) {
   });
 
   app.get("/public", (req, res) => {
-    res.render("public", { style: "public.css" });
+    const query = {};
+    if (req.query.user_id) {
+      query.UserId = req.query.user_id;
+    }
+
+    db.UserStories.findAll({
+      where: query,
+      include: [db.User]
+    }).then(dbUserStory => {
+      const hbsObject = {
+        stories: dbUserStory.map(story => story.dataValues),
+        style: "public.css"
+      };
+      console.log(hbsObject);
+      res.render("public", hbsObject);
+      //res.json(dbUserStory);
+    });
   });
+
   app.get("/userstoryTest", (req, res) => {
     res.render("userstoryTest");
   });
