@@ -31,8 +31,8 @@ module.exports = function(app) {
     res.render("members", { style: "member.css" });
   });
 
-  app.get("/blogtest", (req, res) => {
-    res.render("blogtest");
+  app.get("/public", (req, res) => {
+    res.render("public", { style: "public.css" });
   });
   app.get("/userstoryTest", (req, res) => {
     res.render("userstoryTest");
