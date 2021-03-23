@@ -32,7 +32,7 @@ module.exports = function(app) {
     res.render("members", { style: "member.css" });
   });
 
-  app.get("/public", (req, res) => {
+  app.get("/public", isAuthenticated, (req, res) => {
     const query = {};
     if (req.query.user_id) {
       query.UserId = req.query.user_id;

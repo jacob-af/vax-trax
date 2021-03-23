@@ -43,12 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Get elements from the page
   const bodyInput = document.getElementById("body");
   const dateInput = document.getElementById("dateOfExperience");
-  const cmsForm = document.getElementById("cms");
+  const userPostForm = document.getElementById("userPostForm");
   const postCategorySelect = document.getElementById("category");
-  const vaccine = document.querySelector('input[type="radio"]:checked').value;
-  console.log(dateInput);
+  const vaccine = document.querySelector('input[name="vaccine-type"]:checked')
+    .value;
   // Set default value for the category
-  postCategorySelect.value = "Personal";
+  postCategorySelect.value = "General";
 
   const handleFormSubmit = e => {
     e.preventDefault();
@@ -64,8 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
         category: postCategorySelect.value,
         vaccineType: vaccine
       };
-      console.log("handleFormSubmit -> newPost", newPost);
-
       // Check if the user is updating or creating and preform said function
       if (updating) {
         newPost.id = postId;
@@ -77,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Event listener for when the blog is submitted
-  cmsForm.addEventListener("submit", handleFormSubmit);
+  userPostForm.addEventListener("submit", handleFormSubmit);
 
   // Event handler for when a user submits a post
   const submitPost = post => {

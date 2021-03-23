@@ -15,10 +15,10 @@ module.exports = app => {
         stories: dbUserStory.map(story => story.dataValues)
       };
       hbsObject.stories.map(story => {
-        story.name = story.User.dataValues.name;
+        story.name = story.User.name;
         return story;
       });
-      console.log(hbsObject);
+      //console.log(hbsObject);
       res.render("public", hbsObject);
       //res.json(dbUserStory);
     });
