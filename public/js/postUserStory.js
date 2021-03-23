@@ -21,9 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log(`Success in grabbing post ${id}`, data);
 
           // Populate the form with the existing post
-          titleInput.value = data.title;
+          dateInput.value = data.date;
           bodyInput.value = data.body;
           postCategorySelect.value = data.category;
+          vaccine.value = data.vaccine;
 
           updating = true;
         }
@@ -41,9 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Get elements from the page
   const bodyInput = document.getElementById("body");
-  const titleInput = document.getElementById("title");
+  const dateInput = document.getElementById("date");
   const cmsForm = document.getElementById("cms");
   const postCategorySelect = document.getElementById("category");
+  const vaccine = document.getElementById("vaccine");
 
   // Set default value for the category
   postCategorySelect.value = "Personal";
@@ -56,9 +58,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Create a newPost object to send off to the backend
     const newPost = {
-      title: titleInput.value.trim(),
+      date: dateInput.value,
       body: bodyInput.value.trim(),
-      category: postCategorySelect.value
+      category: postCategorySelect.value,
+      vaccine: vaccine.value
     };
     console.log("handleFormSubmit -> newPost", newPost);
 
