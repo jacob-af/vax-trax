@@ -49,9 +49,9 @@ nav {
     color: white;
 }
 
-.public-card {
+/* .public-card {
     margin-bottom: 4.5rem;
-}
+} */
 
 #cdcDiv {
     color: black;
@@ -66,7 +66,7 @@ nav {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
     font-size: 18px;
-    display: inline-block;
+    
 }
 
 #right-recs {
@@ -75,7 +75,7 @@ nav {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
     font-size: 18px;
-    display: inline-block;
+    
 }
 
 
@@ -90,15 +90,30 @@ nav {
         box-shadow:5px 5px 10px rgb(107, 126, 129);
         margin: 0 0 2rem 3.5rem;
         height: auto;
-        width:30%;
+        width: auto;
         display: inline-block;
+}
+
+.public-card {
+    background:linear-gradient(45deg,  #c7f8f8, #e3f0f0);
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
+    margin: 0 0 2rem 3.5rem;
+    height: auto;
+    width: auto;
+    display: inline-block;
 }
 
 .story-row {
     margin-top: 5rem;
 }
 
-.graph-card {
+.graph-card  {
     background:linear-gradient(45deg,  #c7f8f8, #e3f0f0);
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
