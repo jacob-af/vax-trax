@@ -9,7 +9,8 @@ module.exports = app => {
 
     db.UserStories.findAll({
       where: query,
-      include: [db.User]
+      include: [db.User],
+      options: { allowProtoMethodsByDefault: true }
     }).then(dbUserStory => {
       const hbsObject = {
         stories: dbUserStory.map(story => story.dataValues)
@@ -18,7 +19,7 @@ module.exports = app => {
         story.name = story.User.name;
         return story;
       });
-      //console.log(hbsObject);
+      console.log(hbsObject.stories);
       res.render("public", hbsObject);
       //res.json(dbUserStory);
     });

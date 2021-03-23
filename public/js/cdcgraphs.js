@@ -1,5 +1,6 @@
 $(document).ready(() => {
   const usStates = [
+    { name: "MICHIGAN", abbreviation: "MI" },
     { name: "ALABAMA", abbreviation: "AL" },
     { name: "ALASKA", abbreviation: "AK" },
     { name: "ARIZONA", abbreviation: "AZ" },
@@ -22,7 +23,6 @@ $(document).ready(() => {
     { name: "MAINE", abbreviation: "ME" },
     { name: "MARYLAND", abbreviation: "MD" },
     { name: "MASSACHUSETTS", abbreviation: "MA" },
-    { name: "MICHIGAN", abbreviation: "MI" },
     { name: "MINNESOTA", abbreviation: "MN" },
     { name: "MISSISSIPPI", abbreviation: "MS" },
     { name: "MISSOURI", abbreviation: "MO" },
@@ -117,7 +117,20 @@ $(document).ready(() => {
         ]
       },
       // Configuration options go here
-      options: {}
+      options: {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                // Abbreviate the millions
+                callback: function(value) {
+                  return value / 1e6 + "M";
+                }
+              }
+            }
+          ]
+        }
+      }
     });
     console.log(vaxChart);
   });
@@ -166,7 +179,20 @@ $(document).ready(() => {
           ]
         },
         // Configuration options go here
-        options: {}
+        options: {
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  // Abbreviate the millions
+                  callback: function(value) {
+                    return value / 1e3 + "K";
+                  }
+                }
+              }
+            ]
+          }
+        }
       });
       const casesChart = new Chart(casesData, {
         // The type of chart we want to create
@@ -186,13 +212,26 @@ $(document).ready(() => {
           ]
         },
         // Configuration options go here
-        options: {}
+        options: {
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  // Abbreviate the millions
+                  callback: function(value) {
+                    return value / 1e3 + "K";
+                  }
+                }
+              }
+            ]
+          }
+        }
       });
       console.log(casesChart, deathChart);
     });
   };
 
-  displayGraphs(usStates[22]);
+  displayGraphs(usStates[0]);
 
   const handleStateChange = () => {
     const stateIndex = $("#stateSelector option:selected").val();
