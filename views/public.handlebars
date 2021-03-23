@@ -32,19 +32,21 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="card public-card">
-                        {{> cdctest}}
+                        {{> cdcgraphs}}
                     </div>
                 </div>
             </div>
         </div>
 
         <!--- User stories --->
+        {{#each stories}}
+        {{> userStory}}
+        {{/each}}
 
-
-        {{> getUserStory}}
+        {{!-- {{> getUserStory}} --}}
     </div>
 
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/members.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
