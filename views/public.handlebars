@@ -15,7 +15,7 @@
     <!--- CDC recs and Graphs --->
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="card public-card">
                     <h2 id="cdcDiv">CDC Recommendations</h2>
                     <ul id="left-recs">
@@ -33,21 +33,30 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card public-card">
+                <div class="col-md-5">
+                    <div class="card graph-card">
                         {{> cdcgraphs}}
                     </div>
                 </div>
-            </div>
             <!--- User stories --->
-            <div class="row">
+            {{!-- <div class="row">
                 {{#each stories}}
                 <div class="col-md-4">
                     {{> userStory}}
                 </div>
                 {{/each}}
-            </div>
+            </div> --}}
+        </div>
+
+        <div class="row">
+            <div class="row stories-row">
+                    {{#each stories}}
+                    <div class="col-md-12">
+                        {{> userStory}}
+                    </div>
+                    {{/each}}
+                </div>
+
         </div>
 
 

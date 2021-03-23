@@ -15,8 +15,8 @@ nav {
 
 #logo {
     height: auto;
-    width: 10%;
-    margin: 3rem 0 0 3rem;
+    width: 7%;
+    margin: 3rem 0 0 5rem;
 }
 
 #logout-button, #view-stories {
@@ -26,7 +26,7 @@ nav {
     font-weight: bold;
     font-size: 18px;
     border-radius: 50px;
-    width: 18rem;
+    width: 20rem;
     height: 5rem;
     margin: 5rem 6rem 0 0;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
@@ -77,18 +77,25 @@ label {
     width:auto;
 
 }
- #member-info {
-    background-color: #B0DFDF;
+ .story-card {
+    background:linear-gradient(45deg,  #c7f8f8, #e3f0f0);
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 20px;
     padding: 2rem;
     border-radius: 15px;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
-    margin-right: 3.5rem;
-    height: 60rem;
+    margin: 0 0 2rem 3.5rem;
+    height: auto;
     width:auto;
+ }
+
+ h5, h6 {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
  }
 
  .logsign-btn {
@@ -167,4 +174,13 @@ input[type='radio']:checked:after {
     display: inline-block;
     visibility: visible;
     border: 2px solid #c6c7c7;
+}
+
+#covid-vax, #covid-cases, #covid-deaths {
+    color: black;
+
+}
+
+.graph-row {
+    margin: 5rem 0 0 5rem;
 }
