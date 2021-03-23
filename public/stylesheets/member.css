@@ -111,3 +111,7 @@ nav {
 a:hover {
     color: white;
 }
+
+.graph-con {
+    margin-top: 4rem;
+}
