@@ -13,15 +13,15 @@ module.exports = function(vax_trax_db, DataTypes) {
     },
     vaccineType: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     firstShot: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     secondShot: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     }
   });
   UserStories.associate = models => {
