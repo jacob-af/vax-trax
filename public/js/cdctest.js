@@ -83,41 +83,36 @@ $(document).ready(() => {
     url: "/cdcdata",
     type: "GET"
   }).done(data => {
-    console.log(data);
     const dates = [];
     const vaccination1 = [];
     const vaccination2 = [];
-    data.vaccination_trends_data.filter(datum => datum.location === "USA");
-    data.vaccination_trends_data.sort((a, b) => (a.Date > b.Date ? 1 : -1));
-    data.vaccination_trends_data.forEach(row => {
+    const filterData = data.vaccination_trends_data.filter(
+      datum => datum.Location === "US"
+    );
+    console.log(filterData);
+    filterData.sort((a, b) => (a.Date > b.Date ? 1 : -1));
+    filterData.forEach(row => {
       dates.push(row.Date);
       vaccination1.push(row.Admin_Dose_1_Cumulative);
       vaccination2.push(row.Admin_Dose_2_Cumulative);
     });
-    const deathData = document.getElementById("covid-vax").getContext("2d");
-    const vaxChart = new Chart(deathData, {
-      // The type of chart we want to create
+    const vaxData = document.getElementById("covid-vax").getContext("2d");
+    const vaxChart = new Chart(vaxData, {
       type: "line",
-
-      // The data for our dataset
       data: {
         labels: dates,
         datasets: [
           {
             label: "First Dose",
-            backgroundColor: "rgb(255, 99, 132)",
-            borderColor: "rgb(255, 99, 132)",
-            data: vaccination1,
-            fill: false,
-            pointStyle: "dash"
+            backgroundColor: "#333333",
+            borderColor: "#4C9595",
+            data: vaccination1
           },
           {
             label: "Second Dose",
-            backgroundColor: "rgb(255, 99, 132)",
-            borderColor: "rgb(0, 99, 132)",
-            data: vaccination2,
-            fill: false,
-            pointStyle: "dash"
+            backgroundColor: "#4C9595",
+            borderColor: "#4C9595",
+            data: vaccination2
           }
         ]
       },
@@ -162,8 +157,8 @@ $(document).ready(() => {
           datasets: [
             {
               label: "Covid Deaths in " + state.name,
-              backgroundColor: "rgb(255, 99, 132)",
-              borderColor: "rgb(255, 99, 132)",
+              backgroundColor: "#4C9595",
+              borderColor: "#4C9595",
               data: deaths,
               fill: false,
               pointStyle: "dash"
@@ -182,8 +177,8 @@ $(document).ready(() => {
           datasets: [
             {
               label: "Covid Cases in " + state.name,
-              backgroundColor: "rgb(255, 99, 132)",
-              borderColor: "rgb(255, 99, 132)",
+              backgroundColor: "#4C9595",
+              borderColor: "#4C9595",
               data: cases,
               fill: false,
               pointStyle: "dash"
