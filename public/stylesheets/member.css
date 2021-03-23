@@ -1,5 +1,5 @@
 .member-bg {
-    background-image:linear-gradient(0deg, rgba(253, 253, 253, 1), rgb(196, 247, 244));
+    background-image:linear-gradient(135deg, rgb(253, 253, 253), rgb(195, 197, 197));
     /*, url(/assets/img/vax_card.png)*/
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,13 +21,15 @@ nav {
 
 #logout-button, #view-stories {
     float: right;
-    background-color: #4C9595;
+    background: linear-gradient(#64c4c4, #acf7f7);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: lighter;
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 18px;
     border-radius: 50px;
-    width: 15rem;
+    width: 18rem;
+    height: 5rem;
     margin: 5rem 6rem 0 0;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
 
 }
 
@@ -42,14 +44,22 @@ nav {
     font-size: 35px;
     text-align: left;
     float: left;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
 
-#userEx {
+label {
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#doc-ex {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
     text-align: left;
 }
 
@@ -58,30 +68,35 @@ nav {
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    font-size: 16px;
-    padding: 1.5rem;
+    font-size: 14px;
+    padding: 2rem;
     border-radius: 15px;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
     margin-left: 3.5rem;
+    height: 60rem;
+    width:auto;
+
 }
  #member-info {
     background-color: #B0DFDF;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    font-size: 16px;
-    padding: 1.5rem;
+    font-size: 14px;
+    padding: 2rem;
     border-radius: 15px;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
     margin-right: 3.5rem;
+    height: 60rem;
+    width:auto;
  }
 
  .logsign-btn {
-    background-color: #4C9595;
+    background: linear-gradient(#64c4c4, #acf7f7);
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: lighter;
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 22px;
     border-radius: 50px;
     margin: auto;
     margin-top: 3.5rem;
@@ -89,6 +104,8 @@ nav {
     display: grid;
     width: 15rem;
     height: 5rem;
+    outline: 0;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
 }
 
 
@@ -114,4 +131,40 @@ a:hover {
 
 .graph-con {
     margin-top: 4rem;
+}
+
+#category {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left;
+}
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #f9fcfc;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #c6c7c7;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #41e6e6;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #c6c7c7;
 }
