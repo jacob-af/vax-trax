@@ -1,12 +1,5 @@
 module.exports = function(vax_trax_db, DataTypes) {
   const UserStories = vax_trax_db.define("UserStories", {
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
     body: {
       type: DataTypes.TEXT,
       allowNull: false,
@@ -17,6 +10,18 @@ module.exports = function(vax_trax_db, DataTypes) {
     category: {
       type: DataTypes.STRING,
       defaultValue: "Personal"
+    },
+    vaccineType: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    firstShot: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    secondShot: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   });
   UserStories.associate = models => {
