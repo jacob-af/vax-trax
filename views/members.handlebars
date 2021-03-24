@@ -20,34 +20,36 @@
             </div>
 
             <div class="row">
-                <!-- Blog form --->
+                <!-- Blog Elements --->
                 <div class="col-md-6">
                     {{> postUserStory}}
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 member-stories graph-card">
                     {{#each stories}}
                     {{> userStory}}
                     {{/each}}
                 </div>
-
-            </div>
-            <div class="row graph-row">
-                <div class="col-md-4">
-                    <canvas id="covid-vax"></canvas>
-
-                </div>
-                <div class="col-md-4">
-                    <select id="stateSelector" name="states"></select>
-                    <canvas id="covid-cases"></canvas>
-                </div>
-                <div class="col-md-4">
-                    <canvas id="covid-deaths"></canvas>
-                </div>
             </div>
         </div>
-    </div>
-</div>
+        <!-- Graphs -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/cdcgraphs.js"></script>
-<script type="text/javascript" src="js/members.js"></script>
+        <div class="state-select">
+            <p>Choose a state: <select id="stateSelector" name="states"></select></p>
+        </div>
+
+        <div class="col-md-6">
+            <canvas id="covid-cases"></canvas>
+        </div>
+
+        <div class="col-md-6">
+            <canvas id="covid-deaths"></canvas>
+        </div>
+        <div class="col-md-12">
+            <canvas id="covid-vax"></canvas>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/cdcgraphs.js"></script>
+    <script type="text/javascript" src="js/members.js"></script>

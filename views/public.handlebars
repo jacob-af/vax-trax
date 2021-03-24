@@ -15,9 +15,9 @@
     <!--- CDC recs and Graphs --->
     <div class="container">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-12">
                 <div class="card public-card">
-                    <h2 id="cdcDiv">What to know from the CDC</h2>
+                    <p id="cdcDiv">What to know from the CDC</p>
                     <ul id="left-recs">
                         <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/keythingstoknow.html">What the
                                 CDC wants you to know.</a></li>
@@ -42,8 +42,7 @@
                     </ul>
                 </div>
             </div>
-
-            <div class="col-md-5">
+            <div class="row col-md-6">
                 <div class="card graph-card">
                     {{> cdcgraphs}}
                 </div>
@@ -57,8 +56,14 @@
                 {{/each}}
             </div> --}}
         </div>
-
-
+        <div class="row col-md-6">
+            <div class="row stories-row member-stories">
+                {{#each stories}}
+                <div class="col-md-6">
+                    {{> userStory}}
+                </div>
+                {{/each}}
+            </div>
         <div class="form-group">
             <select class="custom-select" id="category">
                 <option selected value="">All Categories</option>
@@ -77,11 +82,6 @@
             </div>
             {{/each}}
         </div>
-
-
-
-
-
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
