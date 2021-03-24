@@ -1,27 +1,23 @@
 .member-bg {
-    background-image: url(/assets/img/public_bg2.svg), linear-gradient(135deg, #ccd0d8, white);
-    /*, url(/assets/img/vax_card.png)*/
+    background-image: url(/assets/img/public_bg2.svg), linear-gradient(135deg, #CCD0D8, white);
+    /* /, url(/assets/img/vax_card.png)/ */
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 nav {
     height: 10%;
 }
-
 .navbar {
     background-color: transparent;
 }
-
 #logo {
     height: auto;
     width: 10%;
     margin: 3rem 0 0 3rem;
 }
-
 #logout-button {
     float: right;
-    background: linear-gradient(#64c4c4, #acf7f7);
+    background: linear-gradient(#64C4C4, #ACF7F7);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     font-size: 18px;
@@ -31,10 +27,9 @@ nav {
     margin: 5rem 6rem 0 0;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
 }
-
 #dash-button {
     float: right;
-    background: linear-gradient(#64c4c4, #acf7f7);
+    background: linear-gradient(#64C4C4, #ACF7F7);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     font-size: 18px;
@@ -44,15 +39,12 @@ nav {
     margin: 5rem 6rem 0 0;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
 }
-
 .logout {
     color: white;
 }
-
 /* .public-card {
     margin-bottom: 4.5rem;
 } */
-
 #cdcDiv {
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -60,31 +52,26 @@ nav {
     font-size: 45px;
     text-align: center;
 }
-
 #left-recs {
     float: left;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
-    font-size: 18px;
+    font-size: 16px;
 }
-
 #right-recs {
     float: right;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
-    font-size: 18px;
+    font-size: 16px;
 }
-
 .recs {
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
-    font-size: 18px;
+    font-size: 16px;
 }
-
-
 .story-card {
         color: black;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -94,9 +81,8 @@ nav {
         height: auto;
         width: auto;
 }
-
 .public-card {
-    background:linear-gradient(45deg,  #c7f8f8, #e3f0f0);
+    background:linear-gradient(45deg,  #C7F8F8, #E3F0F0);
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
@@ -108,9 +94,8 @@ nav {
     width: auto;
     float: left;
 }
-
 .graph-card  {
-    background: linear-gradient(45deg, #ccd0d8, white);
+    background: linear-gradient(45deg, #CCD0D8, white);
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
@@ -121,13 +106,14 @@ nav {
     height: auto;
     width:auto;
 }
-
 .member-stories {
-    background:linear-gradient(45deg,  #c7f8f8, #e3f0f0);
+    background:linear-gradient(45deg,  #C7F8F8, #E3F0F0);
     padding: 2rem;
     overflow: scroll;
     border-radius: 15px 0 0 0;
     margin-left: 1.5rem;
-    height: 50rem;
-    float: right;
+    height: 88rem;
+}
+.cdc-row{
+    margin-bottom: 3rem;
 }
