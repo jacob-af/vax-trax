@@ -19,9 +19,11 @@
                 <div class="card">
                     <p id="cdcDiv">Important info from the CDC</p>
                     <ul id="left-recs">
-                        <li><a class="recs" href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/keythingstoknow.html">What the
+                        <li><a class="recs"
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/keythingstoknow.html">What the
                                 CDC wants you to know.</a></li>
-                        <li><a class="recs" href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/vaccine-benefits.html">The
+                        <li><a class="recs"
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/vaccine-benefits.html">The
                                 benefits to getting tested.</a></li>
                         <li><a class="recs"
                                 href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/recommendations/specific-groups.html">Specific
@@ -31,18 +33,33 @@
                                 how to get vaccinated?</a></li>
                     </ul>
                     <ul id="right-recs">
-                        <li><a class="recs" href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines.html">What
+                        <li><a class="recs"
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines.html">What
                                 are the different vaccines?</a></li>
-                        <li><a class="recs" href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety.html">Vaccine safety and
+                        <li><a class="recs"
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety.html">Vaccine safety and
                                 monitoring</a></li>
-                        <li><a class="recs" href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety.html">Ensuring vaccines
+                        <li><a class="recs"
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety.html">Ensuring vaccines
                                 work</a></li>
-                        <li><a class="recs" href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/distributing.html">Distribution
+                        <li><a class="recs"
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/distributing.html">Distribution
                                 of vaccines</a></li>
                     </ul>
                 </div>
 
                 <div class="stories-row member-stories">
+                    <div class="form-group">
+                        <select class="custom-select" id="category">
+                            <option selected value="">All Categories</option>
+                            <option value="General">General</option>
+                            <option value="Scheduling First Dose">Scheduling First Dose</option>
+                            <option value="Receiving First Dose">Receiving First Dose</option>
+                            <option value="Recovering From First Dose">Recovering From First Dose</option>
+                            <option value="Receiving Second Dose">Receiving Second Dose</option>
+                            <option value="Recovering From Second Dose">Recovering From Second Dose</option>
+                        </select>
+                    </div>
                     {{#each stories}}
                     <div class="col-md-6">
                         {{> userStory}}
