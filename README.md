@@ -9,10 +9,32 @@ The user can track, what shot they are recieving, when the dates are that they w
 The user can then access other peoples experience that use the site.  The site uses cdc databases and also stores user information on its own database.  This site is deployed through heroku.
 
 ## Follow this link to the live application web site.
+https://vax-trax.herokuapp.com/
 
 ## License
 
 ## The User Experience
+
+The first page that you are brought to is a split page for signing up or signing in.
+
+![Image of random password generator site](/public/assets/img/landing.png)
+
+The individual either signs in or signs up on one of these two pages
+
+![Image of random password generator site](/public/assets/img/login.png)
+
+![Image of random password generator site](/public/assets/img/signup.png)
+
+Once the user is signed in or have signed up they will be brought to their member page.  Here the user can choose to write a blog post about there vaccine experience or acces graphs describing the tregectory of covid deaths, covid cases and how many people have been vaccinated in their area.  The user can also look into cases in other areas.  Once the first post is made then the posts specific to the user will occupy their personal page.
+
+![Image of random password generator site](/public/assets/img/member.png)
+
+The user can then navigate to a more public page where all blog posts from themselves and other users is posted.  This gives the user the ability to look in to how others are coping or dealing with their vaccine experience.  There are direct links to the CDC web site on this page as well that will inform the user of things the CDC thinks all citizens should know about the virus and vaccinations.  There are even still graphs on this page describing the standings of covid deaths, cases and vaccinations in the United States.
+
+![Image of random password generator site](/public/assets/img/public.png)
+
+
+
 
 (this should explain how to use the site and what it does with images of the site)
 
