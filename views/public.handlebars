@@ -42,13 +42,11 @@
                     </ul>
                 </div>
             </div>
-
             <div class="row col-md-6">
                 <div class="card graph-card">
                     {{> cdcgraphs}}
                 </div>
             </div>
-
             <!--- User stories --->
             {{!-- <div class="row">
                 {{#each stories}}
@@ -58,7 +56,6 @@
                 {{/each}}
             </div> --}}
         </div>
-
         <div class="row col-md-6">
             <div class="row stories-row member-stories">
                 {{#each stories}}
@@ -67,11 +64,24 @@
                 </div>
                 {{/each}}
             </div>
-
+        <div class="form-group">
+            <select class="custom-select" id="category">
+                <option selected value="">All Categories</option>
+                <option value="General">General</option>
+                <option value="Scheduling First Dose">Scheduling First Dose</option>
+                <option value="Receiving First Dose">Receiving First Dose</option>
+                <option value="Recovering From First Dose">Recovering From First Dose</option>
+                <option value="Receiving Second Dose">Receiving Second Dose</option>
+                <option value="Recovering From Second Dose">Recovering From Second Dose</option>
+            </select>
         </div>
-
-
-
+        <div class="row stories-row">
+            {{#each stories}}
+            <div class="col-md-12">
+                {{> userStory}}
+            </div>
+            {{/each}}
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -4,4 +4,20 @@ $(document).ready(() => {
   $.get("/api/UserStory").then(() => {
     console.log("Story Loading");
   });
+
+  const handleCategoryChange = e => {
+    let newPostCategory = e.target.value;
+    newPostCategory = newPostCategory.replaceAll(" ", "");
+    console.log(category);
+    $.ajax({
+      url: "/public",
+      method: "GET",
+      data: {
+        category: newPostCategory
+      }
+    }).then(() => {
+      console.log("success");
+    });
+  };
+  $("#category").on("change", handleCategoryChange);
 });

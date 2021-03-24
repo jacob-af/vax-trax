@@ -29,7 +29,6 @@ module.exports = function(app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, (req, res) => {
-    console.log(req);
     const query = { UserId: req.user.id };
 
     db.UserStories.findAll({
@@ -41,16 +40,21 @@ module.exports = function(app) {
         style: "member.css",
         options: { allowProtoMethodsByDefault: true }
       };
-      console.log(hbsObject);
       res.render("members", hbsObject);
       //res.json(dbUserStory);
     });
   });
 
   app.get("/public", isAuthenticated, (req, res) => {
+    console.log(req.query);
+
     const query = {};
     if (req.query.user_id) {
       query.UserId = req.query.user_id;
+    }
+    if (req.query.category) {
+      const category = req.query.category.replace(/([A-Z])/g, " $1").trim();
+      query.category = category;
     }
 
     db.UserStories.findAll({
@@ -70,9 +74,5 @@ module.exports = function(app) {
       res.render("public", hbsObject);
       //res.json(dbUserStory);
     });
-  });
-
-  app.get("/userstoryTest", (req, res) => {
-    res.render("userstoryTest");
   });
 };
