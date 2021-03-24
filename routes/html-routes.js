@@ -66,6 +66,7 @@ module.exports = function(app) {
         style: "public.css",
         options: { allowProtoMethodsByDefault: true }
       };
+      console.log(hbsObject.stories);
       hbsObject.stories.map(story => {
         story.name = story.User.name;
         return story;
