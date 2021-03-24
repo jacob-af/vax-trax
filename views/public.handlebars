@@ -1,8 +1,6 @@
 <div class="member-bg">
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <img class="navbar-brand" id="logo" src="./assets/img/VaxTrax_logo2.png" alt="Vax Trax logo">
-
         <button type="submit" class="btn btn-default" id="logout-button"><a class="logout" href="/logout">
                 Logout
             </a>
@@ -14,7 +12,7 @@
     </nav>
     <!--- CDC recs and Graphs --->
     <div class="container">
-        <div class="row">
+        <div class="row cdc-row">
             <div class="col-md-6">
                 <div class="card">
                     <p id="cdcDiv">Important info from the CDC</p>
@@ -47,7 +45,10 @@
                                 of vaccines</a></li>
                     </ul>
                 </div>
-
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
                 <div class="stories-row member-stories">
                     <div class="form-group">
                         <select class="custom-select" id="category">
@@ -61,25 +62,17 @@
                         </select>
                     </div>
                     {{#each stories}}
-                    <div class="col-md-6">
-                        {{> userStory}}
-                    </div>
+                    {{> userStory}}
                     {{/each}}
                 </div>
             </div>
-            <!--- User stories --->
-
-        </div>
-
-        <div class="row">
             <div class="col-md-6">
                 <div class="card graph-card">
                     {{> cdcgraphs}}
                 </div>
             </div>
-            <div class="col-md-6"></div>
         </div>
-
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/public.js"></script>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
