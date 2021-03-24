@@ -41,7 +41,7 @@ nav {
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 40px;
     text-align: left;
     float: left;
     margin-bottom: 4rem;
@@ -64,7 +64,7 @@ label {
 }
 
 #userPostForm {
-    background-color: #B0DFDF;
+    background:linear-gradient(45deg,  #c7f8f8, #e3f0f0);
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
@@ -73,30 +73,35 @@ label {
     border-radius: 15px;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
     margin-left: 3.5rem;
-    height: 40rem;
+    height: 45rem;
     width:auto;
 
 }
- .story-card {
+
+.member-stories {
     background:linear-gradient(45deg,  #c7f8f8, #e3f0f0);
+    padding: 2rem;
+    overflow: scroll;
+    border-radius: 15px 0 0 0;
+    margin-left: 1.5rem;
+    height: 50rem;
+}
+
+#post-head {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+ .story-card {
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     font-size: 20px;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow:5px 5px 10px rgb(107, 126, 129);
     margin: 0 0 2rem 3.5rem;
     height: auto;
     width:auto;
-    overflow: auto;
- }
-
- h5, h6 {
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    font-size: 18px;
  }
 
  .logsign-btn {
@@ -115,8 +120,6 @@ label {
     outline: 0;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
 }
-
-
 
 .custom-select {
     background-color: #f3fafa;
@@ -192,7 +195,19 @@ input[type='radio']:checked:after {
     margin: 2rem 0 2rem 0;
 }
 
-.member-stories {
-    height: 40rem;
-    overflow: auto;
+.blog-name {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#covid-stats {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: left;
+    float: left;
+    margin-top: 4rem;
 }
