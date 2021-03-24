@@ -195,10 +195,6 @@ input[type='radio']:checked:after {
     margin: 2rem 0 2rem 0;
 }
 
-.member-stories {
-    height: 40rem;
-}
-
 .blog-name {
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
