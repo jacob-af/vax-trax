@@ -9,15 +9,16 @@ $(document).ready(() => {
     let newPostCategory = e.target.value;
     newPostCategory = newPostCategory.replaceAll(" ", "");
     console.log(category);
-    $.ajax({
-      url: "/public",
-      method: "GET",
-      data: {
-        category: newPostCategory
-      }
-    }).then(() => {
-      console.log("success");
-    });
+    window.location.href = "/" + newPostCategory;
+    // $.ajax({
+    //   url: "/public",
+    //   method: "GET",
+    //   data: {
+    //     category: newPostCategory
+    //   }
+    // }).then(() => {
+    //   console.log("success");
+    // });
   };
   $("#category").on("change", handleCategoryChange);
 });

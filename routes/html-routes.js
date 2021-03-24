@@ -76,4 +76,31 @@ module.exports = function(app) {
       //res.json(dbUserStory);
     });
   });
+
+  app.get("/:category", isAuthenticated, (req, res) => {
+    const query = {};
+    if (req.params.category) {
+      const category = req.params.category.replace(/([A-Z])/g, " $1").trim();
+      query.category = category;
+    }
+
+    db.UserStories.findAll({
+      where: query,
+      include: [db.User]
+    }).then(dbUserStory => {
+      const hbsObject = {
+        stories: dbUserStory.map(story => story.toJSON()),
+        style: "public.css",
+        options: { allowProtoMethodsByDefault: true }
+      };
+      console.log(hbsObject.stories);
+      hbsObject.stories.map(story => {
+        story.name = story.User.name;
+        return story;
+      });
+      console.log(hbsObject);
+      res.render("public", hbsObject);
+      //res.json(dbUserStory);
+    });
+  });
 };
