@@ -45,8 +45,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const dateInput = document.getElementById("dateOfExperience");
   const userPostForm = document.getElementById("userPostForm");
   const postCategorySelect = document.getElementById("category");
-  const vaccine = document.querySelector('input[name="vaccine-type"]:checked')
-    .value;
+  let vaccine;
+
+  $("#my-btns .radio-inline").on("click", function() {
+    console.log(
+      $(this)
+        .find("input")
+        .val()
+    );
+    vaccine = $(this)
+      .find("input")
+      .val();
+  });
   // Set default value for the category
   postCategorySelect.value = "General";
 
@@ -75,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Event listener for when the blog is submitted
+
   userPostForm.addEventListener("submit", handleFormSubmit);
 
   // Event handler for when a user submits a post
@@ -89,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(response => response.json())
       .then(data => {
         console.log("Success in submitting post:", data);
-        window.location.href = "/public";
+        window.location.href = "/members";
       })
       .catch(error => {
         console.error("Error:", error);
@@ -107,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
       .then(() => {
         console.log("Attempting update to post");
-        window.location.href = "/public";
+        window.location.href = "/members";
       })
       .catch(error => {
         console.error("Error:", error);
