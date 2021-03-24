@@ -21,19 +21,21 @@
 
             <div class="row">
                 <!-- Blog Elements --->
-                <div class="col-md-6">
+                
+                <div class="col-md-5">
                     {{> postUserStory}}
                 </div>
                 <div class="col-md-6 member-stories graph-card">
+                    <h4 id="post-head">Your blog posts</h4>
+                    <hr>
                     {{#each stories}}
                     {{> userStory}}
                     {{/each}}
                 </div>
+                
             </div>
         </div>
         <!-- Graphs -->
-        <h2 id="cdc-stats">Current stats from the CDC</h2>
-        <hr>
         <div class="state-select">
             <p>Choose a state: <select id="stateSelector" name="states"></select></p>
         </div>
