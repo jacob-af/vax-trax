@@ -15,29 +15,40 @@
     <!--- CDC recs and Graphs --->
     <div class="container">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-12">
                 <div class="card public-card">
-                    <h2 id="cdcDiv">What to know from the CDC</h2>
+                    <p id="cdcDiv">What to know from the CDC</p>
                     <ul id="left-recs">
-                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/keythingstoknow.html">What the CDC wants you to know.</a></li>
-                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/vaccine-benefits.html">The benefits to getting tested.</a></li>
-                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/recommendations/specific-groups.html">Specific info for specific groups.</a></li>
-                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/How-Do-I-Get-a-COVID-19-Vaccine.html">Wondering how to get vaccinated?</a></li>
+                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/keythingstoknow.html">What the
+                                CDC wants you to know.</a></li>
+                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/vaccine-benefits.html">The
+                                benefits to getting tested.</a></li>
+                        <li><a
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/recommendations/specific-groups.html">Specific
+                                info for specific groups.</a></li>
+                        <li><a
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/How-Do-I-Get-a-COVID-19-Vaccine.html">Wondering
+                                how to get vaccinated?</a></li>
                     </ul>
                     <ul id="right-recs">
-                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines.html">What are the different vaccines?</a></li>
-                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety.html">Vaccine safety and monitoring</a></li>
-                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety.html">Ensuring vaccines work</a></li>
-                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/distributing.html">Distribution of vaccines</a></li>
+                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines.html">What
+                                are the different vaccines?</a></li>
+                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety.html">Vaccine safety and
+                                monitoring</a></li>
+                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety.html">Ensuring vaccines
+                                work</a></li>
+                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/distributing.html">Distribution
+                                of vaccines</a></li>
                     </ul>
                 </div>
             </div>
 
-                <div class="col-md-5">
-                    <div class="card graph-card">
-                        {{> cdcgraphs}}
-                    </div>
+            <div class="row col-md-6">
+                <div class="card graph-card">
+                    {{> cdcgraphs}}
                 </div>
+            </div>
+
             <!--- User stories --->
             {{!-- <div class="row">
                 {{#each stories}}
@@ -48,14 +59,14 @@
             </div> --}}
         </div>
 
-        <div class="row">
-            <div class="row stories-row">
-                    {{#each stories}}
-                    <div class="col-md-12">
-                        {{> userStory}}
-                    </div>
-                    {{/each}}
+        <div class="row col-md-6">
+            <div class="row stories-row member-stories">
+                {{#each stories}}
+                <div class="col-md-6">
+                    {{> userStory}}
                 </div>
+                {{/each}}
+            </div>
 
         </div>
 
