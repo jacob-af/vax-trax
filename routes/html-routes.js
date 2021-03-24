@@ -62,7 +62,7 @@ module.exports = function(app) {
       include: [db.User]
     }).then(dbUserStory => {
       const hbsObject = {
-        stories: dbUserStory.map(story => story.dataValues),
+        stories: dbUserStory.map(story => story.toJSON()),
         style: "public.css",
         options: { allowProtoMethodsByDefault: true }
       };
