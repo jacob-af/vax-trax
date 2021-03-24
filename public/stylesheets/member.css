@@ -194,20 +194,3 @@ input[type='radio']:checked:after {
 .form-check {
     margin: 2rem 0 2rem 0;
 }
-
-.blog-name {
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-#covid-stats {
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    font-size: 40px;
-    text-align: left;
-    float: left;
-    margin-top: 4rem;
-}
