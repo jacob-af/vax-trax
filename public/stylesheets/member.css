@@ -59,8 +59,8 @@ label {
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    font-size: 26px;
-    text-align: left;
+    font-size: 22px;
+    text-align: center;
 }
 
 #userPostForm {
@@ -73,7 +73,7 @@ label {
     border-radius: 15px;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
     margin-left: 3.5rem;
-    height: 60rem;
+    height: 40rem;
     width:auto;
 
 }
@@ -89,6 +89,7 @@ label {
     margin: 0 0 2rem 3.5rem;
     height: auto;
     width:auto;
+    overflow: auto;
  }
 
  h5, h6 {
@@ -103,14 +104,14 @@ label {
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 18px;
     border-radius: 50px;
     margin: auto;
-    margin-top: 3.5rem;
+    margin-top: 0rem;
     align-items: center;
     display: grid;
     width: 15rem;
-    height: 5rem;
+    height: 3rem;
     outline: 0;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
 }
@@ -181,6 +182,17 @@ input[type='radio']:checked:after {
 
 }
 
-.graph-row {
-    margin: 5rem 0 0 5rem;
+.state-select {
+    margin: 3rem 0 3rem 45rem;
+    font-weight: bold;
+    
+}
+
+.form-check {
+    margin: 2rem 0 2rem 0;
+}
+
+.member-stories {
+    height: 40rem;
+    overflow: auto;
 }
