@@ -1,0 +1,80 @@
+<div class="member-bg">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img class="navbar-brand" id="logo" src="./assets/img/VaxTrax_logo2.png" alt="Vax Trax logo">
+
+        <button type="submit" class="btn btn-default" id="logout-button"><a class="logout" href="/logout">
+                Logout
+            </a>
+        </button>
+        <button type="submit" class="btn btn-default" id="dash-button"><a class="logout" href="/members">
+                Back to Dashboard
+            </a>
+        </button>
+    </nav>
+    <!--- CDC recs and Graphs --->
+    <div class="container">
+        <div class="row cdc-row">
+            <div class="col-md-6">
+                <div class="card">
+                    <p id="cdcDiv">Important info from the CDC</p>
+                    <ul id="left-recs">
+                        <li><a class="recs"
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/keythingstoknow.html">What the
+                                CDC wants you to know.</a></li>
+                        <li><a class="recs"
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/vaccine-benefits.html">The
+                                benefits to getting tested.</a></li>
+                        <li><a class="recs"
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/recommendations/specific-groups.html">Specific
+                                info for specific groups.</a></li>
+                        <li><a class="recs"
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/How-Do-I-Get-a-COVID-19-Vaccine.html">Wondering
+                                how to get vaccinated?</a></li>
+                    </ul>
+                    <ul id="right-recs">
+                        <li><a class="recs"
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines.html">What
+                                are the different vaccines?</a></li>
+                        <li><a class="recs"
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety.html">Vaccine safety and
+                                monitoring</a></li>
+                        <li><a class="recs"
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety.html">Ensuring vaccines
+                                work</a></li>
+                        <li><a class="recs"
+                                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/distributing.html">Distribution
+                                of vaccines</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="stories-row member-stories">
+                    <div class="form-group">
+                        <select class="custom-select" id="category">
+                            <option selected value="">All Categories</option>
+                            <option value="General">General</option>
+                            <option value="Scheduling First Dose">Scheduling First Dose</option>
+                            <option value="Receiving First Dose">Receiving First Dose</option>
+                            <option value="Recovering From First Dose">Recovering From First Dose</option>
+                            <option value="Receiving Second Dose">Receiving Second Dose</option>
+                            <option value="Recovering From Second Dose">Recovering From Second Dose</option>
+                        </select>
+                    </div>
+                    {{#each stories}}
+                    {{> userStory}}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card graph-card">
+                    {{> cdcgraphs}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
