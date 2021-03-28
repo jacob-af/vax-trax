@@ -1,9 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
 :root{
-    --left-bg-color: rgba(196, 247, 244, 0.50);
-    --right-bg-color: rgba(196, 247, 244, 0.50);
-    --left-btn-hover-color: rgb(134, 223, 235);
-    --right-btn-hover-color: rgb(134, 223, 235);
+ 
+    
     --hover-width: 75%;
     --other-width: 25%;
     --speed: 750ms;
@@ -29,8 +27,8 @@ h1{
 
 #logo {
     height: auto;
-    width: 7%;
-    margin: 3rem 0 0 5rem;
+    width: 8%;
+    margin: 5rem 0 0 5rem;
 }
 
 #left-text {
@@ -73,7 +71,7 @@ h1{
     text-decoration: none;
     color: #fff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: linear-gradient(#64c4c4, #acf7f7);
+    background: linear-gradient(#46b6b6, #acf7f7);
     font-size: 22px;
     font-weight: bold;
     border-radius: 40px;
@@ -116,6 +114,7 @@ h1{
 .split.left::before{
     content:"";
     position: absolute;
+    opacity: 60%;
     width: 100%;
     height: 100%;
     background-color: var(--left-bg-color);
@@ -129,6 +128,7 @@ h1{
 .split.right::before{
     content:"";
     position: absolute;
+    opacity: 60%;
     width: 100%;
     height: 100%;
     background-color: var(--right-bg-color);
