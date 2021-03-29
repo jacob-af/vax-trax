@@ -77,7 +77,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/:category", isAuthenticated, (req, res) => {
+  app.get("/category/:category", isAuthenticated, (req, res) => {
     const query = {};
     if (req.params.category) {
       const category = req.params.category.replace(/([A-Z])/g, " $1").trim();

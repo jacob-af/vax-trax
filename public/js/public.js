@@ -8,8 +8,7 @@ $(document).ready(() => {
   const handleCategoryChange = e => {
     let newPostCategory = e.target.value;
     newPostCategory = newPostCategory.replaceAll(" ", "");
-    console.log(category);
-    window.location.href = "/" + newPostCategory;
+    window.location.href = "/category/" + newPostCategory;
     // $.ajax({
     //   url: "/public",
     //   method: "GET",
