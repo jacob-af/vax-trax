@@ -15,7 +15,7 @@ nav {
 
 #logo {
     height: auto;
-    width: 7%;
+    width: 8%;
     margin: 3rem 0 0 5rem;
 }
 
@@ -39,8 +39,7 @@ nav {
 
 #welcome {
     color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 40px;
     text-align: left;
     float: left;
@@ -49,31 +48,28 @@ nav {
 
 label {
     color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 20px;
     text-align: center;
 }
 
 #doc-ex {
     color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    font-size: 22px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 24px;
     text-align: center;
 }
 
 #userPostForm {
     background:linear-gradient(45deg,  #c7f8f8, #e3f0f0);
     color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 14px;
     padding: 2rem;
     border-radius: 15px;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
     margin-left: 3.5rem;
-    height: 45rem;
+    height: 50rem;
     width:auto;
 
 }
@@ -84,19 +80,17 @@ label {
     overflow: scroll;
     border-radius: 15px 0 0 0;
     margin-left: 1.5rem;
-    height: 45rem;
+    height: 50rem;
 }
 
 #post-head {
     color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 22px;
 }
  .story-card {
     color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
+    font-family: 'Montserrat Alternates', sans-serif;    
     font-size: 20px;
     padding: 2rem;
     margin: 0 0 2rem 3.5rem;
@@ -124,8 +118,7 @@ label {
 .custom-select {
     background-color: #f3fafa;
     color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
     padding: .5rem;
     border-radius: 15px;
@@ -137,7 +130,7 @@ label {
 }
 
 a:hover {
-    color: white;
+    color: #3ca3a3;
 }
 
 .graph-con {
@@ -146,8 +139,15 @@ a:hover {
 
 #category {
     color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    text-align: left;
+}
+
+.radio-inline {
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     font-size: 18px;
     text-align: left;
 }
@@ -180,17 +180,52 @@ input[type='radio']:checked:after {
     border: 2px solid #c6c7c7;
 }
 
-#covid-vax, #covid-cases, #covid-deaths {
+#cdcStats {
     color: black;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 40px;
+    text-align: left;
+    float: left;
+    margin: 6rem 0 1rem 0;
+}
 
+.chooseState {
+    color: black;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 18px;
 }
 
 .state-select {
     margin: 3rem 0 3rem 45rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
     font-weight: bold;
-    
 }
 
 .form-check {
     margin: 2rem 0 2rem 0;
+}
+
+#card-info {
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+.userpost-btn {
+    background: linear-gradient(#64c4c4, #acf7f7);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 3.5rem;
+    align-items: center;
+    display: grid;
+    width: 15rem;
+    height: 3rem;
+    outline: 0;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
+    position: relative;
 }

@@ -12,14 +12,14 @@ nav {
 }
 #logo {
     height: auto;
-    width: 10%;
-    margin: 3rem 0 0 3rem;
+    width: 8%;
+    margin: 3rem 0 0 5rem;
 }
+
 #logout-button {
     float: right;
     background: linear-gradient(#64C4C4, #ACF7F7);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 18px;
     border-radius: 50px;
     width: 18rem;
@@ -30,8 +30,7 @@ nav {
 #dash-button {
     float: right;
     background: linear-gradient(#64C4C4, #ACF7F7);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 18px;
     border-radius: 50px;
     width: 25rem;
@@ -47,36 +46,55 @@ nav {
 } */
 #cdcDiv {
     color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bolder;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 45px;
-    text-align: center;
+    text-align: left;
 }
 #left-recs {
     float: left;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
-    font-size: 16px;
+    font-size: 30px;
 }
 #right-recs {
     float: right;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
-    font-size: 16px;
+    font-size: 30px;
 }
+
 .recs {
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
-    font-size: 16px;
+    font-size: 30px;
 }
+
+.custom-select {
+    background-color: #f3fafa;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    padding: .5rem;
+    border-radius: 15px;
+    box-shadow:5px 5px 5px rgb(107, 126, 129);
+}
+
+#storyFilter {
+    color: black;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
 .story-card {
         color: black;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 22px;
         padding: 2rem;
         height: auto;
         width: auto;
@@ -105,6 +123,7 @@ nav {
     box-shadow:5px 5px 10px rgb(107, 126, 129);
     height: auto;
     width:auto;
+    margin-bottom: 5rem;
 }
 .member-stories {
     background:linear-gradient(45deg,  #C7F8F8, #E3F0F0);
@@ -112,8 +131,26 @@ nav {
     overflow: scroll;
     border-radius: 15px 0 0 0;
     margin-left: 1.5rem;
+    margin-bottom: 5rem;
     height: 88rem;
 }
 .cdc-row{
     margin-bottom: 3rem;
+}
+
+#card-info {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+a:hover {
+    color: #3ca3a3;
+}
+
+.state-select {
+    margin: 3rem 0 3rem 45rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
 }
