@@ -89,7 +89,6 @@ $(document).ready(() => {
     const filterData = data.vaccination_trends_data.filter(
       datum => datum.Location === "US"
     );
-    console.log(filterData);
     filterData.sort((a, b) => (a.Date > b.Date ? 1 : -1));
     filterData.forEach(row => {
       dates.push(row.Date);
@@ -155,7 +154,6 @@ $(document).ready(() => {
         deaths.push(row.tot_death);
         cases.push(row.tot_cases);
       });
-      console.log(dates, deaths);
       const deathData = document
         .getElementById("covid-deaths")
         .getContext("2d");
