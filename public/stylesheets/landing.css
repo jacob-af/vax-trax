@@ -33,9 +33,9 @@ h1{
 
 #left-text {
     font-size: 75px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    line-height: 7rem;
+    line-height: 8rem;
     width: 50%;
     text-align:left;
     color: rgb(10, 10, 10);
@@ -48,9 +48,9 @@ h1{
 
 #right-text {
     font-size: 75px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    line-height: 7rem;
+    line-height: 8rem;
     text-align: right;
     color: rgb(10, 10, 10);
     position: absolute;
