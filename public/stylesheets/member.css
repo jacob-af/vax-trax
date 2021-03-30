@@ -200,6 +200,7 @@ input[type='radio']:checked:after {
     font-family: 'Lato', sans-serif;
     font-size: 22px;
     font-weight: bold;
+    float: left;
 }
 
 .form-check {
@@ -232,4 +233,35 @@ input[type='radio']:checked:after {
 
 #covid-vax {
     margin-bottom: 5rem;
+}
+
+@media(max-width: 991px){
+    #userPostForm {
+        background:linear-gradient(45deg,  #c7f8f8, #e3f0f0);
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow:5px 5px 10px rgb(107, 126, 129);
+        margin: 2rem 0 5rem 0;
+        height: 50rem;
+        width:auto;
+    
+    }
+
+    .chooseState {
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        align-items: center;
+    }
+    
+    #stateSelector {
+        margin: 3rem 0 3rem 45rem;
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        align-items: center;
+    }
 }

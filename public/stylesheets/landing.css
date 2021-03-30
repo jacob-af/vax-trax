@@ -162,4 +162,73 @@ a:hover {
         padding: 1.2rem;
         width: 12rem
     }
+
+    #left-text {
+        font-size: 50px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        line-height: 5rem;
+        width: 50%;
+        text-align:left;
+        color: rgb(10, 10, 10);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+    
+    #right-text {
+        font-size: 50px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        line-height: 5rem;
+        text-align: right;
+        color: rgb(10, 10, 10);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+}
+
+@media(max-width: 600px){
+    h1{
+        font-size: 14px;
+        top: 30%
+    }
+    .signup-btn{
+        padding: 1.2rem;
+        width: 12rem
+    }
+
+    #left-text {
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        line-height: 2rem;
+        width: 50%;
+        text-align:left;
+        color: rgb(10, 10, 10);
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+    
+    #right-text {
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        line-height: 2rem;
+        text-align: right;
+        color: rgb(10, 10, 10);
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
 }

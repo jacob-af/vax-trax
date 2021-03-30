@@ -18,23 +18,23 @@
             <div class="col-md-12">
                 <h2 id="welcome">Welcome <span class="member-name"></span></h2>
             </div>
-
-            <div class="row">
-                <!-- Blog Elements --->
-
-                <div class="col-md-6">
-                    {{> postUserStory}}
-                </div>
-                <div class="col-md-5 member-stories graph-card">
-                    <h4 id="post-head">Your blog posts</h4>
-                    <hr>
-                    {{#each stories}}
-                    {{> userStory}}
-                    {{/each}}
-                </div>
-
-            </div>
         </div>
+        <div class="row">
+            <!-- Blog Elements --->
+
+            <div class="col-md-6">
+                {{> postUserStory}}
+            </div>
+            <div class="col-md-5 member-stories graph-card">
+                <h4 id="post-head">Your blog posts</h4>
+                <hr>
+                {{#each stories}}
+                {{> userStory}}
+                {{/each}}
+            </div>
+
+        </div>
+
         <!-- Graphs -->
         <div class="row">
             <h2 id="cdcStats">Latest stats from the CDC</h2>
