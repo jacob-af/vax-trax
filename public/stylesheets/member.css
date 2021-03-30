@@ -39,7 +39,7 @@ nav {
 
 #welcome {
     color: black;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     text-align: left;
     float: left;
@@ -48,14 +48,14 @@ nav {
 
 label {
     color: black;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     text-align: center;
 }
 
 #doc-ex {
     color: black;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     text-align: center;
 }
@@ -63,7 +63,7 @@ label {
 #userPostForm {
     background:linear-gradient(45deg,  #c7f8f8, #e3f0f0);
     color: black;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     padding: 2rem;
     border-radius: 15px;
@@ -85,12 +85,12 @@ label {
 
 #post-head {
     color: black;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 22px;
 }
  .story-card {
     color: black;
-    font-family: 'Montserrat Alternates', sans-serif;    
+    font-family: 'Montserrat', sans-serif;    
     font-size: 20px;
     padding: 2rem;
     margin: 0 0 2rem 3.5rem;
@@ -182,7 +182,7 @@ input[type='radio']:checked:after {
 
 #cdcStats {
     color: black;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     text-align: left;
     float: left;
@@ -191,7 +191,7 @@ input[type='radio']:checked:after {
 
 .chooseState {
     color: black;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
 }
 
@@ -228,4 +228,8 @@ input[type='radio']:checked:after {
     outline: 0;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
     position: relative;
+}
+
+#covid-vax {
+    margin-bottom: 5rem;
 }

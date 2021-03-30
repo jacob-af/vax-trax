@@ -19,7 +19,7 @@ nav {
 #logout-button {
     float: right;
     background: linear-gradient(#64C4C4, #ACF7F7);
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     border-radius: 50px;
     width: 18rem;
@@ -30,7 +30,7 @@ nav {
 #dash-button {
     float: right;
     background: linear-gradient(#64C4C4, #ACF7F7);
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     border-radius: 50px;
     width: 25rem;
@@ -46,7 +46,7 @@ nav {
 } */
 #cdcDiv {
     color: black;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 45px;
     text-align: left;
 }
@@ -56,6 +56,7 @@ nav {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
     font-size: 30px;
+    padding-left: 2rem
 }
 #right-recs {
     float: right;
@@ -63,6 +64,7 @@ nav {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
     font-size: 30px;
+    margin-right: 2rem
 }
 
 .recs {
@@ -85,7 +87,7 @@ nav {
 
 #storyFilter {
     color: black;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     text-align: center;
 }
@@ -136,6 +138,7 @@ nav {
 }
 .cdc-row{
     margin-bottom: 3rem;
+    padding-left: 3rem;
 }
 
 #card-info {
