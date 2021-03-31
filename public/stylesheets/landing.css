@@ -1,34 +1,104 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
 :root{
- 
-    
     --hover-width: 75%;
     --other-width: 25%;
     --speed: 750ms;
 }
-*{
-    box-sizing: border-box;
-}
-body{
-    height: 100vh;
+
+html body{
+    height: 50vh;
     width:100%;
     overflow: hidden;
     margin: 0;
 }
+
 h1{
+    
     font-size: 4rem;
     color: #fff;
-    position: absolute;
     left: 50%;
     top: 20%;
     transform: translateX(-50%);
     white-space: nowrap;
-} */
+} 
 
-#logo {
-    height: auto;
-    width: 8%;
-    margin: 5rem 0 0 5rem;
+.split{
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+.split.left{
+    left: 0;
+    background: url('../assets/img/vax_card.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.right{
+    right: 0;
+    background: url('../assets/img/Capture.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#left-text {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 2rem;
+    width: 50%;
+    text-align:left;
+    color: rgb(10, 10, 10);
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+#right-text {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 2rem;
+    text-align: left;
+    color: rgb(10, 10, 10);
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.signup-btn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top:70%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(#46b6b6, #acf7f7);
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 40px;
+    text-transform: uppercase;
+    width: 10rem;
+    height: 3rem;
+    padding: 1.5rem;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
+}
+
+@media screen and (min-width:1200px) {
+
+html body{
+        height: 100vh;
+        width:100%;
+        overflow: hidden;
+        margin: 0;
 }
 
 #left-text {
@@ -66,7 +136,7 @@ h1{
     align-items: center;
     justify-content: center;
     left: 50%;
-    top:80%;
+    top:70%;
     transform: translateX(-50%);
     text-decoration: none;
     color: #fff;
@@ -77,6 +147,7 @@ h1{
     border-radius: 40px;
     text-transform: uppercase;
     width: 25rem;
+    height: 5rem;
     padding: 1.5rem;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
 }
@@ -97,6 +168,7 @@ h1{
     width: 100%;
     height: 100%;
     background: rgb(251, 253, 253);
+    display: flex;
     
 }
 .split{
@@ -153,62 +225,22 @@ a:hover {
     color: white;
 }
 
-@media(max-width: 800px){
-    h1{
-        font-size: 2rem;
-        top: 30%
-    }
-    .signup-btn{
-        padding: 1.2rem;
-        width: 12rem
-    }
-
-    #left-text {
-        font-size: 50px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        line-height: 5rem;
-        width: 50%;
-        text-align:left;
-        color: rgb(10, 10, 10);
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%);
-        white-space: nowrap;
-    }
-    
-    #right-text {
-        font-size: 50px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        line-height: 5rem;
-        text-align: right;
-        color: rgb(10, 10, 10);
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%);
-        white-space: nowrap;
-    }
 }
 
-@media(max-width: 600px){
-    h1{
-        font-size: 14px;
-        top: 30%
-    }
-    .signup-btn{
-        padding: 1.2rem;
-        width: 12rem
-    }
+/*@media screen and (min-width:760px) {
 
+    html body{
+            height: 100vh;
+            width:100%;
+            overflow: hidden;
+            margin: 0;
+    }
+    
     #left-text {
-        font-size: 20px;
+        font-size: 36px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        line-height: 2rem;
-        width: 50%;
+        line-height: 5rem;
         text-align:left;
         color: rgb(10, 10, 10);
         position: absolute;
@@ -219,10 +251,10 @@ a:hover {
     }
     
     #right-text {
-        font-size: 20px;
+        font-size: 36px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        line-height: 2rem;
+        line-height: 5rem;
         text-align: right;
         color: rgb(10, 10, 10);
         position: absolute;
@@ -231,4 +263,89 @@ a:hover {
         transform: translateX(-50%);
         white-space: nowrap;
     }
-}
+    
+    .signup-btn{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 50%;
+        top:55%;
+        transform: translateX(-50%);
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background: linear-gradient(#46b6b6, #acf7f7);
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 40px;
+        text-transform: uppercase;
+        width: 18rem;
+        padding: 1.5rem;
+        box-shadow:5px 5px 10px rgb(107, 126, 129);
+    }
+    
+    
+    #landing-container{ 
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: rgb(251, 253, 253);
+        display: flex;
+        
+    }
+    .split{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .split.left{
+        left: 0;
+        background: url('../assets/img/vax_card.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .split.left::before{
+        content:"";
+        position: absolute;
+        opacity: 60%;
+        width: 100%;
+        height: 100%;
+        background-color: var(--left-bg-color);
+    }
+    .split.right{
+        right: 0;
+        background: url('../assets/img/Capture.PNG');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .split.right::before{
+        content:"";
+        position: absolute;
+        opacity: 60%;
+        width: 100%;
+        height: 100%;
+        background-color: var(--right-bg-color);
+    }
+    .split.right, .split.left, .split.left::before, .split.right::before{
+        transition: all var(--speed) ease-in-out
+    }
+    .hover-left .left{
+        width: var(--hover-width)
+    }
+    .hover-left .right {
+        width: var(--other-width)
+    }
+    .hover-right .right{
+        width: var(--hover-width)
+    }
+    .hover-right .left {
+        width: var(--other-width)
+    }
+    
+    a:hover {
+        color: white;
+    }
+    
+    }*/

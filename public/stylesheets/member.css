@@ -15,6 +15,235 @@ nav {
 
 #logo {
     height: auto;
+    width: 30%;
+    margin: 2rem 0 0 2rem;
+}
+
+#logout-button, #view-stories {
+    float: right;
+    background: linear-gradient(#64c4c4, #acf7f7);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 50px;
+    width: 14rem;
+    height: 4rem;
+    margin: 2rem 1.5rem 0 0;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
+
+}
+
+.logout {
+    color: white;
+}
+
+#welcome {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    float: left;
+    margin: 2rem 0 2rem 3rem;
+}
+
+label {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+#doc-ex {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+#userPostForm {
+    background:linear-gradient(45deg,  #c7f8f8, #e3f0f0);
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
+    margin: 0 1.5rem 5rem 1.5rem;
+    height: auto;
+    width:auto;
+
+}
+
+.member-stories {
+    background:linear-gradient(45deg,  #c7f8f8, #e3f0f0);
+    padding: 2rem;
+    overflow: scroll;
+    border-radius: 15px 0 0 0;
+    margin: 1.5rem 3rem 3rem 3rem;
+    height: 50rem;
+}
+
+#post-head {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+ .story-card {
+    color: black;
+    font-family: 'Montserrat', sans-serif;    
+    font-size: 16px;
+    padding: 1rem;
+    margin: 0 0 2rem 0;
+    height: auto;
+    width:auto;
+ }
+
+ .logsign-btn {
+    background: linear-gradient(#64c4c4, #acf7f7);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 0rem;
+    align-items: center;
+    display: grid;
+    width: 15rem;
+    height: 3rem;
+    outline: 0;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
+}
+
+.custom-select {
+    background-color: #f3fafa;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    padding: .5rem;
+    border-radius: 15px;
+    box-shadow:5px 5px 5px rgb(107, 126, 129);
+}
+
+#select-cat {
+    margin-top: 1.5rem;
+}
+
+a:hover {
+    color: #3ca3a3;
+}
+
+.graph-con {
+    margin-top: 4rem;
+}
+
+#category {
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    text-align: left;
+    width: 75%;
+}
+
+.radio-inline {
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: left;
+}
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #f9fcfc;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #c6c7c7;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #41e6e6;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #c6c7c7;
+}
+
+#cdcStats {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    float: left;
+    margin: 3rem 1rem 1rem 1rem;
+}
+
+.chooseState {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.state-select {
+    margin: 1rem 0 1.5rem 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    float:left;
+}
+
+#stateSelector {
+    width: 75%;
+}
+
+.form-check {
+    margin: 2rem 0 2rem 0;
+}
+
+#card-info {
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+}
+
+.userpost-btn {
+    background: linear-gradient(#64c4c4, #acf7f7);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 3.5rem;
+    align-items: center;
+    display: grid;
+    width: 15rem;
+    height: 3rem;
+    outline: 0;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
+    position: relative;
+}
+
+#covid-vax {
+    margin-bottom: 5rem;
+}
+
+@media screen and (min-width:1200px) {
+
+#logo {
+    height: auto;
     width: 8%;
     margin: 3rem 0 0 5rem;
 }
@@ -196,11 +425,11 @@ input[type='radio']:checked:after {
 }
 
 .state-select {
-    margin: 3rem 0 3rem 45rem;
+    margin: 6rem 3rem 3rem 3rem;
     font-family: 'Lato', sans-serif;
     font-size: 22px;
     font-weight: bold;
-    float: left;
+    float:right;
 }
 
 .form-check {
@@ -235,7 +464,57 @@ input[type='radio']:checked:after {
     margin-bottom: 5rem;
 }
 
-@media(max-width: 991px){
+}
+
+/*@media screen and (min-width:760px) {
+
+    #logo {
+        height: auto;
+        width: 20%;
+        margin: 3rem 0 0 5rem;
+    }
+    
+    #logout-button, #view-stories {
+        float: right;
+        background: linear-gradient(#64c4c4, #acf7f7);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 50px;
+        width: 20rem;
+        height: 5rem;
+        margin: 5rem 6rem 0 0;
+        box-shadow:5px 5px 10px rgb(107, 126, 129);
+    
+    }
+    
+    .logout {
+        color: white;
+    }
+    
+    #welcome {
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        text-align: left;
+        float: left;
+        margin-bottom: 4rem;
+    }
+    
+    label {
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    #doc-ex {
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        text-align: center;
+    }
+    
     #userPostForm {
         background:linear-gradient(45deg,  #c7f8f8, #e3f0f0);
         color: black;
@@ -244,24 +523,171 @@ input[type='radio']:checked:after {
         padding: 2rem;
         border-radius: 15px;
         box-shadow:5px 5px 10px rgb(107, 126, 129);
-        margin: 2rem 0 5rem 0;
+        margin-left: 3.5rem;
         height: 50rem;
-        width:auto;
+        width:85%;
     
     }
-
+    
+    .member-stories {
+        background:linear-gradient(45deg,  #c7f8f8, #e3f0f0);
+        padding: 2rem;
+        overflow: scroll;
+        border-radius: 15px 0 0 0;
+        margin-left: 3.5rem;
+        height: 50rem;
+        width:85%;
+    }
+    
+    #post-head {
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+    }
+     .story-card {
+        color: black;
+        font-family: 'Montserrat', sans-serif;    
+        font-size: 20px;
+        padding: 2rem;
+        margin: 0 0 2rem 3.5rem;
+        height: auto;
+        width:85%;
+     }
+    
+     .logsign-btn {
+        background: linear-gradient(#64c4c4, #acf7f7);
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 50px;
+        margin: auto;
+        margin-top: 0rem;
+        align-items: center;
+        display: grid;
+        width: 15rem;
+        height: 3rem;
+        outline: 0;
+        box-shadow:5px 5px 10px rgb(107, 126, 129);
+    }
+    
+    .custom-select {
+        background-color: #f3fafa;
+        color: black;
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        padding: .5rem;
+        border-radius: 15px;
+        box-shadow:5px 5px 5px rgb(107, 126, 129);
+    }
+    
+    #select-cat {
+        margin-top: 1.5rem;
+    }
+    
+    a:hover {
+        color: #3ca3a3;
+    }
+    
+    .graph-con {
+        margin-top: 4rem;
+    }
+    
+    #category {
+        color: black;
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        text-align: left;
+    }
+    
+    .radio-inline {
+        color: black;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        text-align: left;
+    }
+    
+    input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #f9fcfc;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid #c6c7c7;
+    }
+    
+    input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #41e6e6;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid #c6c7c7;
+    }
+    
+    #cdcStats {
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        text-align: left;
+        float: left;
+        margin: 6rem 0 1rem 3rem;
+    }
+    
     .chooseState {
         color: black;
         font-family: 'Montserrat', sans-serif;
-        font-size: 14px;
-        align-items: center;
+        font-size: 18px;
     }
     
-    #stateSelector {
-        margin: 3rem 0 3rem 45rem;
+    .state-select {
+        margin: 6rem 3rem 3rem 3rem;
         font-family: 'Lato', sans-serif;
-        font-size: 14px;
+        font-size: 22px;
         font-weight: bold;
-        align-items: center;
+        float:right;
     }
-}
+    
+    .form-check {
+        margin: 2rem 0 2rem 0;
+    }
+    
+    #card-info {
+        color: black;
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+    }
+    
+    .userpost-btn {
+        background: linear-gradient(#64c4c4, #acf7f7);
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 50px;
+        margin: auto;
+        margin-top: 3.5rem;
+        align-items: center;
+        display: grid;
+        width: 15rem;
+        height: 3rem;
+        outline: 0;
+        box-shadow:5px 5px 10px rgb(107, 126, 129);
+        position: relative;
+    }
+    
+    #covid-vax {
+        margin-bottom: 5rem;
+    }
+}*/
