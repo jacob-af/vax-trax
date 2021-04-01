@@ -2,6 +2,7 @@
     height: 100vh;
     width: 100%;
     background-image: url(/assets/img/su_bg2.svg), linear-gradient(135deg, #ccd0d8, white);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
 }
@@ -10,9 +11,91 @@
     height: 100vh;
     width: 100%;
     background-image: url(/assets/img/login_bg2.svg), linear-gradient(45deg, white, #ccd0d8);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
 }
+
+.su-card {
+    background-color: #B0DFDF;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 4rem 0 0 0;
+    height: 50rem;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    height: 65rem;
+    width: 90%;
+}
+
+.login-card {
+    background-color: #B0DFDF;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 4rem 0 0 0;
+    height: 50rem;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    width: 90%;
+}
+
+#logo {
+    height: auto;
+    width: 20%;
+    margin: 2rem 0 0 3rem;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+}
+
+#password-input, #email-input, #password-confirm {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+
+.logsign-btn {
+    background: linear-gradient(#64c4c4, #acf7f7);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 3.5rem;
+    align-items: center;
+    display: grid;
+    width: 15rem;
+    height: 5rem;
+    outline: 0;
+    box-shadow:5px 5px 10px rgb(107, 126, 129);
+}
+
+a:hover {
+    color: white;
+}
+
+label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+}
+
+.login-link {
+    color: rgb(107, 126, 129);
+}
+
+@media screen and (min-width:1200px) {
 
 .su-card {
     background-color: #B0DFDF;
@@ -21,7 +104,7 @@
     margin-top: 7.5rem;
     height: 50rem;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 18px;
     color: black;
@@ -35,7 +118,7 @@
     margin-top: 7.5rem;
     height: 50rem;
     box-shadow:5px 5px 10px rgb(107, 126, 129);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 18px;
     color: black;
@@ -48,21 +131,21 @@
 }
 
 h2 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 40px;
     text-align: center;
 }
 
 #password-input, #email-input, #password-confirm {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
 }
 
 .logsign-btn {
     background: linear-gradient(#64c4c4, #acf7f7);
     color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 22px;
     border-radius: 50px;
@@ -81,7 +164,7 @@ a:hover {
 }
 
 label {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 18px;
     color: black;
@@ -89,4 +172,5 @@ label {
 
 .login-link {
     color: rgb(107, 126, 129);
+}
 }
